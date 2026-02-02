@@ -1,0 +1,57 @@
+package futbolista;
+
+import com.google.gson.JsonArray;
+
+public class Futbolista {
+	private int dorsal;
+	private String nombre;
+	private String[] demarcacion;
+	private String equipo;
+
+	public Futbolista(int dorsal, String nombre, String[] demarcacion, String equipo) {
+		this.dorsal = dorsal;
+		this.nombre = nombre;
+		this.demarcacion = demarcacion;
+		this.equipo = equipo;
+	}
+
+	@Override
+	public String toString() {
+		return "FUTBOLISTA: \n" + 
+	"Nombre: " + this.nombre + 
+	"\n" + "Dorsal: " + this.dorsal + 
+	"\n" + "Demarcación: " + this.demarcacion +
+	"\n" + "Equipo: " + this.equipo + "\n";
+	}
+	public int getDorsal() {
+		return dorsal;
+	}
+
+	public void setDorsal(int dorsal) {
+		this.dorsal = dorsal;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String[] getDemarcacion() {
+		return demarcacion;
+	}
+
+	public void setDemarcacion(JsonArray demarcacion) {
+		this.demarcacion = demarcacion;
+	}
+
+	public String getEquipo() {
+		return equipo;
+	}
+
+	public void setEquipo(String equipo) {
+		this.equipo = equipo;
+	}
+}

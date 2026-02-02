@@ -2,3 +2,6 @@ docker-compose.yml
 BBDD-Oracle/oradata/
 *.dbf
 *.LOG
+.env
+target/
+.idea/

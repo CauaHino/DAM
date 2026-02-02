@@ -1,0 +1,2 @@
+El valor de la suma es 265.0
+El valor de la media es 44.166666666666664

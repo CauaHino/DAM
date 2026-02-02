@@ -1,0 +1,2 @@
+primera línea en minúsculas
+SEGUNDA LÍNEA EN MAYÚSCULAS
