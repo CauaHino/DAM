@@ -1,0 +1,114 @@
+/* 1. Fuente y Reset Básico */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. El fondo y el centrado de la pantalla */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Fondo morado */
+    min-height: 100vh;      /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;    /* Centra el contenedor principal en medio de la pantalla */
+}
+
+/* 3. El contenedor que agrupa el Formulario y el Botón Naranja */
+.contenedor-principal {
+    display: flex;
+    flex-direction: column; /* IMPORTANTE: Pone los elementos uno debajo del otro */
+    align-items: center;    /* Centra el formulario y el botón horizontalmente */
+    width: 100%;
+    padding: 20px;          /* Espacio a los lados en móviles */
+}
+
+/* 4. Estilo de la Tarjeta Blanca (El Formulario) */
+#miFormulario {
+    background: #ffffff;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;       /* Ancho máximo de la tarjeta */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    margin-bottom: 20px;    /* Espacio entre la tarjeta blanca y el botón naranja */
+}
+
+/* Títulos y Etiquetas */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+/* Inputs y Textarea */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #764ba2; /* Borde morado al escribir */
+    outline: none;
+}
+
+textarea {
+    resize: vertical;      /* Solo permite redimensionar hacia abajo */
+    height: 100px;
+}
+
+/* 5. Botón "Enviar" (El Morado dentro del form) */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #5b3785;
+}
+
+button[type="button"]{
+    display: block;            /* Para que se comporte como un bloque/botón */
+    width: 100%;              /* Ocupa todo el ancho */
+    background-color: #ff914d; /* Color NARANJA */
+    color: white;             /* Texto blanco */
+    padding: 12px;            /* Relleno para que se vea gordito */
+    border-radius: 5px;       /* Bordes redondeados */
+    text-align: center;       /* Texto centrado */
+    text-decoration: none;    /* Quitar el subrayado del enlace */
+    font-weight: bold;        /* Texto en negrita */
+    border: none;             /* Sin bordes extraños */
+    
+    /* ESTO ES LO QUE LO SEPARA: */
+    margin-top: 20px;         /* Separación del botón de arriba */
+}
+
+/* Efecto al pasar el ratón (se oscurece un poco) */
+.btn-naranja:hover {
+    background-color: #e67e22;
+    cursor: pointer;
+}
