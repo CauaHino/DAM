@@ -32,10 +32,14 @@ public class LeerJson {
 			String nombre = jsonObject.get("nombre").getAsString();
 			String equipo = jsonObject.get("equipo").getAsString();
 			JsonArray demarcacionJson = jsonObject.get("demarcacion").getAsJsonArray();
-			String[] demarcacion = new String[demarcacionJson.size()];
+			String [] demarcaciones = new String[demarcacionJson.size()];
+			
+			for(int i = 0; i < demarcaciones.length; i++) {
+				demarcaciones[i] = demarcacionJson.get(i).getAsString();
+			}
 
 			// Creamos nuestro objeto Futbolista
-			Futbolista iniesta = new Futbolista(dorsal, nombre, demarcacion[0], equipo);
+			Futbolista iniesta = new Futbolista(dorsal, nombre, demarcaciones, equipo);
 
 			// Mostramos la información del futbolista por pantalla
 			System.out.println(iniesta);

@@ -5,22 +5,27 @@ import com.google.gson.JsonArray;
 public class Futbolista {
 	private int dorsal;
 	private String nombre;
-	private String[] demarcacion;
+	private String[] demarcaciones;
 	private String equipo;
 
-	public Futbolista(int dorsal, String nombre, String[] demarcacion, String equipo) {
+	public Futbolista(int dorsal, String nombre, String[] demarcaciones, String equipo) {
 		this.dorsal = dorsal;
 		this.nombre = nombre;
-		this.demarcacion = demarcacion;
+		this.demarcaciones = demarcaciones;
 		this.equipo = equipo;
 	}
+	
 
 	@Override
 	public String toString() {
+		String demarcaciones = "";
+		for(String d : this.demarcaciones) {
+			demarcaciones += d + " | ";
+		}
 		return "FUTBOLISTA: \n" + 
 	"Nombre: " + this.nombre + 
 	"\n" + "Dorsal: " + this.dorsal + 
-	"\n" + "Demarcación: " + this.demarcacion +
+	"\n" + "Demarcación: " + demarcaciones +
 	"\n" + "Equipo: " + this.equipo + "\n";
 	}
 	public int getDorsal() {
@@ -40,11 +45,11 @@ public class Futbolista {
 	}
 
 	public String[] getDemarcacion() {
-		return demarcacion;
+		return demarcaciones;
 	}
 
 	public void setDemarcacion(String[] demarcacion) {
-		this.demarcacion = demarcacion;
+		this.demarcaciones = demarcacion;
 	}
 
 	public String getEquipo() {
