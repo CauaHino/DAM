@@ -3,7 +3,9 @@ SET SERVEROUTPUT ON;
 begin 
 dbms_output.put_line('hola');
 end;
+/
 -- Punto 2
+drop table if exists agenda;
 create table agenda(
     apellido varchar(30),
     nombre varchar(20),
@@ -29,5 +31,5 @@ begin
     
     dbms_output.put_line('El número de filas en la tabla agenda es: ' || v_numFilas);
 end;
-
+/
 
