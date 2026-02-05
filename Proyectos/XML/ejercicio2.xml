@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <producto>
+        <nombre>Smartphone XYZ</nombre>
+        <marca>MarcaTech</marca>
+        <precio>499.99</precio>
+        <caracteristica>
+            <caracteristica nombre="Pantalla">5.5 pulgadas</caracteristica>
+            <caracteristica nombre="Procesador">Snapdragon 855</caracteristica>
+            <caracteristica nombre="RAM">4 GB</caracteristica>
+        </caracteristica>
+    </producto>
+    <producto>
+        <nombre>Tablet ABC</nombre>
+        <marca>MarcaTech</marca>
+        <precio>299.99</precio>
+        <caracteristica>
+            <caracteristica nombre="Pantalla">10.1 pulgadas</caracteristica>
+            <caracteristica nombre="Procesador">Intel Core i5</caracteristica>
+            <caracteristica nombre="Memoria Interna">120 GB</caracteristica>
+        </caracteristica>
+    </producto>
+</catalogo>
