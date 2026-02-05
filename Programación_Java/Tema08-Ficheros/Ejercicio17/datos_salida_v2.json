@@ -1,0 +1,44 @@
+[
+  {
+    "nombre": "Juan",
+    "apellidos": "Pérez García",
+    "edad": 30,
+    "asignaturas": [
+      {
+        "idAsignatura": 1,
+        "nombre": "Programación"
+      },
+      {
+        "idAsignatura": 2,
+        "nombre": "Bases de Datos"
+      },
+      {
+        "idAsignatura": 3,
+        "nombre": "Sistemas Informáticos"
+      }
+    ]
+  },
+  {
+    "nombre": "Ana",
+    "apellidos": "Vázquez Rodríguez",
+    "edad": 22,
+    "asignaturas": [
+      {
+        "idAsignatura": 1,
+        "nombre": "Programación"
+      },
+      {
+        "idAsignatura": 2,
+        "nombre": "Entornos de Desarrollo"
+      },
+      {
+        "idAsignatura": 3,
+        "nombre": "Sistemas Informáticos"
+      },
+      {
+        "idAsignatura": 4,
+        "nombre": "Lenguajes de Marcas"
+      }
+    ]
+  }
+]
