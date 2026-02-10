@@ -1,0 +1,29 @@
+[
+  {
+    "tipo": "unifamiliar",
+    "precio": 85000,
+    "superficie": 85
+  },
+  {
+    "tipo": "chalet",
+    "precio": 250000,
+    "superficie": 300,
+    "metrosJardin": 100
+  },
+  {
+    "tipo": "piso",
+    "precio": 55000,
+    "superficie": 70,
+    "numHabitaciones": 2
+  },
+  {
+    "tipo": "casadecampo",
+    "precio": 150000,
+    "superficie": 200,
+    "metrosParcela": 700
+  },
+  {
+    "tipo": "localcomercial",
+    "superficie": 50
+  }
+]  

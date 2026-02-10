@@ -1,0 +1,17 @@
+unifamiliar
+85000
+85
+chalet
+250000
+300
+100
+piso
+55000
+70
+2
+casadecampo
+150000
+200
+700
+localcomercial
+50
