@@ -5,3 +5,8 @@ BBDD-Oracle/oradata/
 .env
 target/
 .idea/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
