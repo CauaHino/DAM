@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mi Aplicación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="index-container">
+        <div class="index-card">
+            <h1 class="index-title">Bienvenido</h1>
+            <p class="index-subtitle">Sistema de Gestión</p>
+            
+            <div class="index-buttons">
+                <a href="/form_login" class="btn btn-primary">
+                    <span class="btn-icon">🔐</span>
+                    Iniciar Sesión
+                </a>
+                
+                <a href="/registro" class="btn btn-secondary">
+                    <span class="btn-icon">📝</span>
+                    Registrarse
+                </a>
+            </div>
+            
+            <div class="index-features">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Rápido</h3>
+                    <p>Acceso inmediato a tu cuenta</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Seguro</h3>
+                    <p>Tus datos están protegidos</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">💡</div>
+                    <h3>Fácil</h3>
+                    <p>Interfaz intuitiva y simple</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
