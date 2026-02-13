@@ -3,6 +3,10 @@
   <groupId>test</groupId>
   <artifactId>test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
   <dependencies>
   	<dependency>
   		<groupId>org.junit.jupiter</groupId>
@@ -12,13 +16,11 @@
   	</dependency>
   </dependencies>
   <build>
-    <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.13.0</version>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
         <configuration>
-          <release>21</release>
           <useModulePath>false</useModulePath>
         </configuration>
       </plugin>

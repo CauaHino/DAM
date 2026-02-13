@@ -1,8 +1,6 @@
-package test;
-
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
+
 
 public class NumeroParTest {
 	
@@ -27,7 +25,7 @@ public class NumeroParTest {
 	
 	void numeroCero() {
 		boolean resultado = Validacion.validacion(0);
-		assertEquals(true,resultado);
+		assertTrue(resultado);
 	}
 
 }
