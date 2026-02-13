@@ -1,0 +1,65 @@
+[
+  {
+    "tipo": "LAVADORA",
+    "precio": 300,
+	"peso": 60,
+    "consumo": "C",
+    "color": "blanco",
+    "carga": 30
+  },
+  {
+    "tipo": "TELEVISION",
+    "precio": 700,
+    "peso": 16,
+	"consumo": "F",
+    "color": "negro",
+	"pulgadas": 55,
+	"smartTV": true
+  },
+  {
+    "tipo": "LAVADORA2",
+    "precio": 250,
+    "peso": 50
+  },
+  {
+    "tipo": "LAVADORA",
+    "precio": 480,
+	"peso": 75,
+    "consumo": "B",
+    "color": "gris",
+    "carga": 35
+  },
+  {
+    "tipo": "TELEVISION",
+    "precio": 880,
+    "peso": 17.5,
+	"consumo": "E",
+    "color": "gris",
+	"pulgadas": 65,
+	"smartTV": true
+  },
+  {
+    "tipo": "TELEVISION2",
+    "precio": 260,
+    "peso": 12.8
+  },
+  {
+    "tipo": "TELEVISION2",
+    "precio": 140,
+    "peso": 13.5
+  },
+  {
+    "tipo": "LAVADORA0"
+  },
+  {
+    "tipo": "LAVADORA",
+    "precio": 270,
+    "peso": 60,
+	"consumo": "A",
+    "color": "azul",
+    "carga": 26
+  },
+  {
+    "tipo": "TELEVISION0"
+  }
+]

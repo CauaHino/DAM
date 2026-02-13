@@ -81,17 +81,27 @@ END;
 
 -- Punto 5
 declare 
-    v_codc char(8) := '&codC';
-    v_direccion varchar(50) := '&direccion';
+    v_codc clientes.codc%type;
+    v_direccion clientes.direccion%type;
 begin
-    update clientes
-    set direccion = v_direccion
-    where codc = v_codc;
-    dbms_output.put_line('La dirección del cliente ' || trim(v_codc) || ' fue actualizada para ' || v_direccion);
+    v_codc := '&codC';
+    v_direccion := '&direccion';
     
+        update clientes
+        set direccion = v_direccion
+        where codc = v_codc;
+           
+        if sql%found then
+            dbms_output.put_line('La dirección del cliente ' || trim(v_codc) || ' fue actualizada para ' || v_direccion);
+        end if;
+    
+        if sql%notfound then
+        dbms_output.put_line('No existe el cliente ' || v_codc);
+        end if;
     commit;
 end;
 /
+
 
 -- Punto 6
 declare 
@@ -111,6 +121,7 @@ end;
 -- Punto 7
 declare 
     v_pais proveedores.pais%type;
+    numProveedores number(7,0);
 begin
     v_pais := '&paisBorrar';
     
@@ -122,7 +133,9 @@ begin
     delete from proveedores
     where pais = v_pais;
     
-    dbms_output.put_line('Los proveedores de ' || v_pais || ' Fueron Borrados');
+    numProveedores := sql%rowcount;
+    
+    dbms_output.put_line('Fueron borrados '|| numProveedores ||' Proveedores'||);
     
     commit;
 end;
