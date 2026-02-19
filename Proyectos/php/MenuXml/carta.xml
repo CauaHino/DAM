@@ -18,4 +18,10 @@
     <descripcion>Dos gruesas rebanadas de nuestro pan francés casero</descripcion>
     <calorias>600</calorias>
   </comida>
+  <comida>
+    <nombre>Tortilla</nombre>
+    <precio>2</precio>
+    <descripcion>a</descripcion>
+    <calorias>500</calorias>
+  </comida>
 </menu>
