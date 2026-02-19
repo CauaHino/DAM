@@ -8,29 +8,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Catálogo de Libros</h1>
+    <h1>Menu Restaurante</h1>
     <p>Datos cargados desde XML usando PHP</p>
     
     
     <!-- Contenedor de la tabla (visible cuando hay datos) -->
     <div id="contenedor-tabla">
-        <table id="tabla-libros">
+        <table id="menu-table">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Título</th>
-                    <th>Autor</th>
-                    <th>Año</th>
+                    <th>Nombre</th>
                     <th>Precio</th>
+                    <th>Descripción</th>
+                    <th>Calorías</th>
                 </tr>
             </thead>
             <tbody id="cuerpo-tabla">
                 <?php
-                // =============================================
-                // CÓDIGO PHP - Se ejecuta en el servidor
-                // Incluimos el archivo que procesa el XML
-                // =============================================
-                include 'cargar_datos.php';
+                include 'cargarDatos.php';
                 ?>
             </tbody>
         </table>
