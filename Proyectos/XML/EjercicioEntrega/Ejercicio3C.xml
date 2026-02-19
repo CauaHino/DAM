@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<padre>
+    <hijo1>
+        <nombre>Juan<apellido>Pérez</apellido></nombre>
+    </hijo1>
+    <hijo2>
+        <nombre>Luis<apellido>García</apellido></nombre>
+    </hijo2>
+</padre>
+
+<!-- Se cierra mal la etiqueta de apellido en el segundo hijo, la primera que se abre es la ultima
+que se cierra. -->

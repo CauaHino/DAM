@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<familia>
+    <hijo1>
+        <nombre>Juan</nombre>
+        <apellido>Pérez</apellido>
+    </hijo1>
+    <hijo2>
+        <nombre>Luis</nombre>
+        <apellido>García</apellido>
+    </hijo2>
+</familia>
+
+<!-- Falta el elemento raiz que contenda a los hijos. -->

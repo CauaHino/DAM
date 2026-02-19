@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deportistas>
+    <deportista>
+        <deporte tipo="Atletismo" />
+        <nombre>Jesse Owens</nombre>
+    </deportista>
+    <deportista>
+        <deporte tipo="Natación" />
+        <nombre>Mark Spitz</nombre>
+    </deportista>
+</deportistas>
+
+<!-- faltaba cerrar la etiqueta de deportistas, y le falta ponerle un tipo de valor al atributo 
+deporte. -->

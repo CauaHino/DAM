@@ -22,6 +22,7 @@ end;
 /
 
 -- Punto 2
+-- No puedo controlar la excepcion que sale al poner un articulo que no existe, porque todavía no hemos dado el tema.
 declare 
     v_codA articulos.coda%type;
     v_pvp articulos.pvp%type;
@@ -62,9 +63,6 @@ begin
     commit;
 end;
 /
- 
- select *
- from articulos;
     
     
 
