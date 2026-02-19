@@ -10,6 +10,7 @@
 <body>
     <h1>Menu Restaurante</h1>
     <p>Datos cargados desde XML usando PHP</p>
+    <button id="btn-anadir" onclick="window.location.href='anadir.php'">Añadir Comida</button>
     
     
     <!-- Contenedor de la tabla (visible cuando hay datos) -->

@@ -1,6 +1,6 @@
 <?php
 
-$archivo_xml = 'Ejercicio9.xml';
+$archivo_xml = 'carta.xml';
 
 // Paso 2: Verificar que el archivo existe y si no nos mostrará un mensaje de error
 if (!file_exists($archivo_xml)) {
