@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Pepe",
+    "edad": 51,
+    "dinero": 5000,
+    "presencial": true
+  },
+  {
+    "nombre": "María",
+    "edad": 25,
+    "dinero": 500,
+    "presencial": false
+  },
+  {
+    "nombre": "Juan",
+    "edad": 17,
+    "dinero": 100,
+    "presencial": true
+  },
+  {
+    "nombre": "Ana",
+    "edad": 18,
+    "dinero": 1200,
+    "presencial": true
+  },
+  {
+    "nombre": "Felipe",
+    "edad": 45,
+    "dinero": 2000,
+    "presencial": false
+  }
+]

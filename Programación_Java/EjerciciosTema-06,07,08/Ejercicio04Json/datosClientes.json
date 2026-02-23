@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "Pepe",
+    "dni": "11111111A",
+    "carnetTurismo": true,
+    "carnetFurgoneta": false,
+    "carnetCamion": false
+  },
+  {
+    "nombre": "Ana",
+    "dni": "22222222B",
+    "carnetTurismo": true,
+    "carnetFurgoneta": true,
+    "carnetCamion": false
+  },
+  {
+    "nombre": "Perico",
+    "dni": "33333333C",
+    "carnetTurismo": false,
+    "carnetFurgoneta": false,
+    "carnetCamion": true
+  },
+  {
+    "nombre": "Teresa",
+    "dni": "44444444D",
+    "carnetTurismo": false,
+    "carnetFurgoneta": true,
+    "carnetCamion": true
+  },
+  {
+    "nombre": "Fermín",
+    "dni": "55555555E",
+    "carnetTurismo": false,
+    "carnetFurgoneta": false,
+    "carnetCamion": true
+  }
+]

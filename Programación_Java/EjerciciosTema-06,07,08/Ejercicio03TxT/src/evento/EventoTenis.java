@@ -62,19 +62,22 @@ public class EventoTenis extends Evento{
 	@Override
 	public void procesarApuesta(Apuesta apuesta) {
 		double dineroActual = 0;
-		if (apuesta.getPronostico().equals(this.resultado)) {
+		if(apuesta.getPronostico().equals(this.resultado)) {
 			dineroActual = apuesta.getCliente().getDinero();
-			if ("1".equals(this.resultado)) {
-				this.dineroEntregado += apuesta.getCantidadApostada() * COTIZACION1;
-				apuesta.getCliente().setDinero(dineroActual += (apuesta.getCantidadApostada() * COTIZACION1));
-			} else if ("2".equals(this.resultado)) {
-				this.dineroEntregado += apuesta.getCantidadApostada() * COTIZACION2;
-				apuesta.getCliente().setDinero(dineroActual += (apuesta.getCantidadApostada() * COTIZACION2));
+			if(getJugador1().equals(this.resultado)) {
+				this.dineroEntregado += apuesta.getCantidadApostada()*COTIZACION1;
+				apuesta.getCliente().setDinero(dineroActual += 
+						(apuesta.getCantidadApostada()*COTIZACION1));
 			}
-		} else {
+			else if(getJugador2().equals(this.resultado)) {
+				this.dineroEntregado += apuesta.getCantidadApostada()*COTIZACION2;
+				apuesta.getCliente().setDinero(dineroActual += 
+						(apuesta.getCantidadApostada()*COTIZACION2));
+			}
+		}
+		else {
 			this.dineroRecaudado += apuesta.getCantidadApostada();
 		}
+	}
 		
 	}
-
-}
