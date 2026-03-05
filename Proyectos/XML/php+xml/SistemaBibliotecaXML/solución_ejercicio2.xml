@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<biblioteca>
+    <libro>
+        <titulo>La vida está en otra parte</titulo>
+        <autor>Milan Kundera</autor>
+        <fechaPublicacion año="1973"/>
+    </libro>
+    <libro>
+        <titulo>Pantaleón y las visitadoras</titulo>
+        <autor fechaNacimiento="28/03/1936">Mario Vargas Llosa</autor>
+        <fechaPublicacion año="1973"/>
+    </libro>
+    <libro>
+        <titulo>Conversación en la catedral</titulo>
+        <autor fechaNacimiento="28/03/1936">Mario Vargas Llosa</autor>
+        <fechaPublicacion año="1969"/>
+    </libro>
+    <libro>
+        <titulo>El Quijote</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <año>1605</año>
+    </libro>
+    <libro>
+        <titulo>Cien años de soledad</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <año>1967</año>
+    </libro>
+    <libro>
+        <titulo>1984</titulo>
+        <autor>George Orwell</autor>
+        <año>1949</año>
+    </libro>
+</biblioteca>

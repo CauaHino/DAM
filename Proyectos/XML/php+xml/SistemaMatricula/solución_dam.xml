@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dam>
+    <alumno id="1">
+        <nombre>Carlos Pérez</nombre>
+        <edad>20</edad>
+        <curso>1ºDAM</curso>
+        <asignaturas>
+            <asignatura>Programación</asignatura>
+            <asignatura>Bases de Datos</asignatura>
+            <asignatura>Entornos de Desarrollo</asignatura>
+        </asignaturas>
+    </alumno>
+    <alumno id="2">
+        <nombre>Lucía Gómez</nombre>
+        <edad>19</edad>
+        <curso>1ºDAM</curso>
+        <asignaturas>
+            <asignatura>Programación</asignatura>
+            <asignatura>Lenguajes de Marcas</asignatura>
+        </asignaturas>
+    </alumno>
+    <alumno id="3">
+        <nombre>David Martínez</nombre>
+        <edad>21</edad>
+        <curso>1ºDAM</curso>
+        <asignaturas>
+            <asignatura>Bases de Datos</asignatura>
+            <asignatura>Entornos de Desarrollo</asignatura>
+            <asignatura>Lenguajes de Marcas</asignatura>
+        </asignaturas>
+    </alumno>
+    <alumno id="4">
+        <nombre>Ana López</nombre>
+        <edad>20</edad>
+        <curso>1ºDAM</curso>
+        <asignaturas>
+            <asignatura>Programación</asignatura>
+            <asignatura>Bases de Datos</asignatura>
+            <asignatura>Entornos de Desarrollo</asignatura>
+            <asignatura>Lenguajes de Marcas</asignatura>
+        </asignaturas>
+    </alumno>
+</dam>
