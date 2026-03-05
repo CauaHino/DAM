@@ -10,4 +10,4 @@ venv/
 env/
 __pycache__/
 *.pyc
-Dockerfile
+Dockerfile*
