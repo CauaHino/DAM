@@ -1,0 +1,86 @@
+[
+  {
+    "tipo": "Alumno",
+    "nombre": "Pepe",
+    "apellidos": "González",
+    "edad": 17,
+    "curso": "1º"
+  },
+  {
+    "tipo": "Alumno",
+    "nombre": "Ana",
+    "apellidos": "López",
+    "edad": 22,
+    "curso": "1º"
+  },
+  {
+    "tipo": "Alumno",
+    "nombre": "Raquel",
+    "apellidos": "Ovejas",
+    "edad": 21,
+    "curso": "1º"
+  },
+  {
+    "tipo": "Profesor",
+    "nombre": "Luis",
+    "apellidos": "García",
+    "edad": 42,
+    "curso": "1º"
+  },
+  {
+    "tipo": "Alumno",
+    "nombre": "Jaime",
+    "apellidos": "Peña",
+    "edad": 25,
+    "curso": "1º"
+  },
+  {
+    "tipo": "Alumno",
+    "nombre": "Enrique",
+    "apellidos": "Saiz",
+    "edad": 23,
+    "curso": "1º"
+  },
+  {
+    "tipo": "Alumno",
+    "nombre": "Jose",
+    "apellidos": "Gutiérrez",
+    "edad": 28,
+    "curso": "2º"
+  },
+  {
+    "tipo": "Alumno",
+    "nombre": "Cristina",
+    "apellidos": "Martínez",
+    "edad": 29,
+    "curso": "2º"
+  },
+  {
+    "tipo": "Profesor",
+    "nombre": "Javier",
+    "apellidos": "Gómez",
+    "edad": 48,
+    "curso": "2º"
+  },
+  {
+    "tipo": "Alumno",
+    "nombre": "Miguel",
+    "apellidos": "Indurain",
+    "edad": 23,
+    "curso": "2º"
+  },
+  {
+    "tipo": "Alumno",
+    "nombre": "Fátima",
+    "apellidos": "Fajardo",
+    "edad": 25,
+    "curso": "2º"
+  },
+  {
+    "tipo": "Alumno",
+    "nombre": "Alexis",
+    "apellidos": "Sánchez",
+    "edad": 31,
+    "curso": "2º"
+  }
+]

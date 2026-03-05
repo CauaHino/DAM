@@ -1,18 +1,19 @@
 package vehiculos;
 
+import java.util.Scanner;
+
 import clientes.Cliente;
 
 public class Camion extends Vehiculo{
+	Scanner teclado = new Scanner(System.in);
+	
 	private boolean grua;
 	
 	public Camion(String matricula, String marca, double km, boolean grua) {
-		super(matricula, marca, 0, km, 90, 0.50);
+		super(matricula, marca, km, 90, 0.50);
 		this.precioDia = 90;
 		this.precioKm = 0.50;
 		this.grua = grua;
-		if(this.grua) {
-			this.precioDia += 50;
-		}
 	}
 	
 	@Override
@@ -36,14 +37,44 @@ public class Camion extends Vehiculo{
 	
 	@Override
 	public boolean alquilar(Cliente cliente) {
-		if (!this.alquilado && cliente.isCarnetCamion() == true) {
-			this.setAlquilado(true);
-			System.out.println("El Vehiculo fue Alquilado con éxito");
-			cliente.setVehiculoAlquilado(this);
-			return true;
+		boolean alquilar = false;
+
+		if (cliente.isCarnetTurismo() && cliente.getVehiculoAlquilado() == null && !this.alquilado) {
+			String opcion = "";
+			System.out.println("Para cuantos dias se alquila el vehiculo?");
+			this.diasAlquiler = teclado.nextInt();
+			teclado.nextLine();
+			System.out.println("El coste del alquiler es de: " + this.diasAlquiler * this.precioDia + ", "
+					+ this.precioKm + " por km recorrido");
+
+			do {
+				System.out.println("Desea alquilar el turismo: Si(s) / No(n)");
+				opcion = teclado.nextLine();
+			} while (!cliente.comprobarOpcion(opcion));
+
+			if ("s".equalsIgnoreCase(opcion)) {
+				cliente.setVehiculoAlquilado(this);
+				this.alquilado = true;
+				alquilar = true;
+				System.out.println("Turismo alquilado");
+			} else {
+				System.out.println("Se ha cancelado el alquiler del Turismo");
+			}
+		} else {
+			System.out.println("No se ha podido alquilar el turismo porque...");
+			if (!cliente.isCarnetTurismo()) {
+				System.out.println("El cliente " + cliente.getNombre() + " con ID " + cliente.getId()
+						+ " no tiene el carnet para alquilar turismo \n");
+			} else if (cliente.getVehiculoAlquilado() != null) {
+				System.out.println("El cliente " + cliente.getNombre() + " con ID " + cliente.getId()
+						+ " ya tiene un vehiculo alquilado \n");
+			} else {
+				System.out
+						.println("El turismo " + this.marca + " con matricula " + this.matricula + "YA esta alquilado");
+			}
 		}
-		System.out.println("No fue posible alquilar el coche");
-		return false;
+
+		return alquilar;
 	}
 
 	@Override

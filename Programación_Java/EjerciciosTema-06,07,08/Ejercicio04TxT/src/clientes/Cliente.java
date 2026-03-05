@@ -3,13 +3,18 @@ package clientes;
 import vehiculos.Vehiculo;
 
 public class Cliente {
+	public static int contador = 0;
+	public int id;
 	private String nombre;
 	private String dni;
 	private Vehiculo vehiculoAlquilado;
 	private boolean carnetTurismo;
 	private boolean carnetFurgoneta;
 	private boolean carnetCamion;
+	
 	public Cliente(String nombre, String dni, boolean carnetTurismo, boolean carnetFurgoneta, boolean carnetCamion) {
+		contador++;
+		this.id = contador;
 		this.nombre = nombre;
 		this.dni = dni;
 		this.carnetTurismo = carnetTurismo;
@@ -56,12 +61,27 @@ public class Cliente {
 	@Override
 	public String toString() {
 	    return "CLIENTE: \n" +
+	    		"\tID: " + id + "\n" +
 	            "\tNombre: " + nombre + "\n" +
 	            "\tDNI: " + dni + "\n" +
 	            "\tCarnet Turismo: " + (carnetTurismo ? "Sí" : "No") + "\n" +
 	            "\tCarnet Furgoneta: " + (carnetFurgoneta ? "Sí" : "No") + "\n" +
 	            "\tCarnet Camion: " + (carnetCamion ? "Sí" : "No") + "\n" +
 	            "\tVehiculo Alquilado: " + (vehiculoAlquilado != null ? vehiculoAlquilado.getMatricula() : "Ninguno");
+	}
+	public int getId() {
+		return id;
+	}
+	
+	public boolean comprobarOpcion(String opcion) {
+		if("s".equalsIgnoreCase(opcion)) {
+			return true;
+		} else if("n".equalsIgnoreCase(opcion)) {
+			return true;
+		} else {
+			System.out.println("¡OPCIÓN NO VÁLIDA!");
+			return false;
+		}
 	}
 
 }

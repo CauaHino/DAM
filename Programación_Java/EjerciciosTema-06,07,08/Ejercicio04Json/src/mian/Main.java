@@ -11,7 +11,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Cliente[] clientes = new Cliente[5];
-		Vehiculo[] vehiculos = new Vehiculo[6];
+		Vehiculo[] vehiculos = null;
 
 		Gson gson = new Gson();
 
@@ -24,6 +24,7 @@ public class Main {
 			boolean grua = false;
 
 			JsonArray jsonArray = JsonParser.parseReader(br).getAsJsonArray();
+			vehiculos = new Vehiculo[jsonArray.size()];
 			for (int i = 0; i < vehiculos.length || i < jsonArray.size(); i++) {
 
 				JsonObject jsonObject = jsonArray.get(i).getAsJsonObject();

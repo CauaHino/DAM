@@ -1,0 +1,746 @@
+La persona Pepe González no puede cursar o dar clase en el CFGS DAM
+-------------------------------------------------------------------------------
+INFORMACIÓN DE LOS PROFESORES:
+-------------------------------------------------------------------------------
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+-------------------------------------------------------------------------------
+INFORMACIÓN DE LOS ALUMNOS:
+-------------------------------------------------------------------------------
+ALUMNO: 
+	ID: 1 
+	Curso: 1º 
+	Nombre: Ana
+	Apellidos: López 
+	Edad: 22 años
+	Matriculado en: 
+nullnull
+ALUMNO: 
+	ID: 2 
+	Curso: 1º 
+	Nombre: Raquel
+	Apellidos: Ovejas 
+	Edad: 21 años
+	Matriculado en: 
+nullnull
+ALUMNO: 
+	ID: 3 
+	Curso: 1º 
+	Nombre: Jaime
+	Apellidos: Peña 
+	Edad: 25 años
+	Matriculado en: 
+nullnull
+ALUMNO: 
+	ID: 4 
+	Curso: 1º 
+	Nombre: Enrique
+	Apellidos: Saiz 
+	Edad: 23 años
+	Matriculado en: 
+nullnull
+ALUMNO: 
+	ID: 5 
+	Curso: 2º 
+	Nombre: Jose
+	Apellidos: Gutiérrez 
+	Edad: 28 años
+	Matriculado en: 
+nullnull
+ALUMNO: 
+	ID: 6 
+	Curso: 2º 
+	Nombre: Cristina
+	Apellidos: Martínez 
+	Edad: 29 años
+	Matriculado en: 
+nullnull
+ALUMNO: 
+	ID: 7 
+	Curso: 2º 
+	Nombre: Miguel
+	Apellidos: Indurain 
+	Edad: 23 años
+	Matriculado en: 
+nullnull
+ALUMNO: 
+	ID: 8 
+	Curso: 2º 
+	Nombre: Fátima
+	Apellidos: Fajardo 
+	Edad: 25 años
+	Matriculado en: 
+nullnull
+ALUMNO: 
+	ID: 9 
+	Curso: 2º 
+	Nombre: Alexis
+	Apellidos: Sánchez 
+	Edad: 31 años
+	Matriculado en: 
+nullnull
+null
+
+-------------------------------------------------------------------------------
+INFORMACIÓN DE LAS ASIGNATURAS ANTES DE CALIFICAR:
+-------------------------------------------------------------------------------
+	ASIGNATURA: 
+		Nombre: Programación Java
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 0
+
+	ASIGNATURA: 
+		Nombre: Bases de Datos
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 0
+
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+
+
+-------------------------------------------------------------------------------
+INFORMACIÓN DE LOS ALUMNOS CON ASIGNATURAS:
+-------------------------------------------------------------------------------
+ALUMNO: 
+	ID: 1 
+	Curso: 1º 
+	Nombre: Ana
+	Apellidos: López 
+	Edad: 22 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Java
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 0
+	ASIGNATURA: 
+		Nombre: Bases de Datos
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 0
+
+ALUMNO: 
+	ID: 2 
+	Curso: 1º 
+	Nombre: Raquel
+	Apellidos: Ovejas 
+	Edad: 21 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Java
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 0
+	ASIGNATURA: 
+		Nombre: Bases de Datos
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 0
+
+ALUMNO: 
+	ID: 3 
+	Curso: 1º 
+	Nombre: Jaime
+	Apellidos: Peña 
+	Edad: 25 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Java
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 0
+	ASIGNATURA: 
+		Nombre: Bases de Datos
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 0
+
+ALUMNO: 
+	ID: 4 
+	Curso: 1º 
+	Nombre: Enrique
+	Apellidos: Saiz 
+	Edad: 23 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Java
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 0
+	ASIGNATURA: 
+		Nombre: Bases de Datos
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 0
+
+ALUMNO: 
+	ID: 5 
+	Curso: 2º 
+	Nombre: Jose
+	Apellidos: Gutiérrez 
+	Edad: 28 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+
+ALUMNO: 
+	ID: 6 
+	Curso: 2º 
+	Nombre: Cristina
+	Apellidos: Martínez 
+	Edad: 29 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+
+ALUMNO: 
+	ID: 7 
+	Curso: 2º 
+	Nombre: Miguel
+	Apellidos: Indurain 
+	Edad: 23 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+
+ALUMNO: 
+	ID: 8 
+	Curso: 2º 
+	Nombre: Fátima
+	Apellidos: Fajardo 
+	Edad: 25 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+
+ALUMNO: 
+	ID: 9 
+	Curso: 2º 
+	Nombre: Alexis
+	Apellidos: Sánchez 
+	Edad: 31 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 0
+
+null
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+INFORMACIÓN DE LOS ALUMNOS DESPUÉS DE CALIFICAR:
+-------------------------------------------------------------------------------
+ALUMNO: 
+	ID: 1 
+	Curso: 1º 
+	Nombre: Ana
+	Apellidos: López 
+	Edad: 22 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Java
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 10
+	ASIGNATURA: 
+		Nombre: Bases de Datos
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 7
+
+ALUMNO: 
+	ID: 2 
+	Curso: 1º 
+	Nombre: Raquel
+	Apellidos: Ovejas 
+	Edad: 21 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Java
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 3
+	ASIGNATURA: 
+		Nombre: Bases de Datos
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 3
+
+ALUMNO: 
+	ID: 3 
+	Curso: 1º 
+	Nombre: Jaime
+	Apellidos: Peña 
+	Edad: 25 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Java
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 10
+	ASIGNATURA: 
+		Nombre: Bases de Datos
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 8
+
+ALUMNO: 
+	ID: 4 
+	Curso: 1º 
+	Nombre: Enrique
+	Apellidos: Saiz 
+	Edad: 23 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Java
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 3
+	ASIGNATURA: 
+		Nombre: Bases de Datos
+		Curso: 1º
+		Impartida por: 
+		PROFESOR: 
+			ID: 1
+			Curso: 1º
+			Nombre: Luis
+			Apellidos: García
+			Edad: 42 años
+
+		Calificación: 5
+
+ALUMNO: 
+	ID: 5 
+	Curso: 2º 
+	Nombre: Jose
+	Apellidos: Gutiérrez 
+	Edad: 28 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 7
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 7
+
+ALUMNO: 
+	ID: 6 
+	Curso: 2º 
+	Nombre: Cristina
+	Apellidos: Martínez 
+	Edad: 29 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 6
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 3
+
+ALUMNO: 
+	ID: 7 
+	Curso: 2º 
+	Nombre: Miguel
+	Apellidos: Indurain 
+	Edad: 23 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 7
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 8
+
+ALUMNO: 
+	ID: 8 
+	Curso: 2º 
+	Nombre: Fátima
+	Apellidos: Fajardo 
+	Edad: 25 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 8
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 3
+
+ALUMNO: 
+	ID: 9 
+	Curso: 2º 
+	Nombre: Alexis
+	Apellidos: Sánchez 
+	Edad: 31 años
+	Matriculado en: 
+	ASIGNATURA: 
+		Nombre: Programación Multimedia
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 6
+	ASIGNATURA: 
+		Nombre: Programación de Servicios
+		Curso: 2º
+		Impartida por: 
+		PROFESOR: 
+			ID: 2
+			Curso: 2º
+			Nombre: Javier
+			Apellidos: Gómez
+			Edad: 48 años
+
+		Calificación: 1
+
+-------------------------------------------------------------------------------
+PORCENTAJES DE APROBADOS/SUSPENSOS POR ASIGNATURA
+Aprobados Java: 50%
+Suspensos Java: 50%
+Aprobados BBDD: 75%
+Suspensos BBDD: 25%
+-------------------------------------------------------------------------------
+Aprobados Programación Multimedia: 100%
+Suspensos Programación Multimedia: 0%
+Aprobados Programación de Servicios: 40%
+Suspensos Programación de Servicios: 60%

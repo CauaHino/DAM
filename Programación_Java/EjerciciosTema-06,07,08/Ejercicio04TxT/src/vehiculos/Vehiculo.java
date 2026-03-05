@@ -11,10 +11,9 @@ public abstract class Vehiculo implements Alquiler {
 	protected double precioKm;
 	protected boolean alquilado;
 	
-	public Vehiculo(String matricula, String marca, int dias, double km, double precioDia, double precioKm) {
+	public Vehiculo(String matricula, String marca, double km, double precioDia, double precioKm) {
 		this.matricula = matricula;
 		this.marca = marca;
-		this.diasAlquiler = dias;
 		this.km = km;
 		this.precioDia = precioDia;
 		this.precioKm = precioKm;
@@ -78,4 +77,13 @@ public abstract class Vehiculo implements Alquiler {
 	
 	public abstract String toString();
 
+	public boolean compruebaKm(double KmDevuelto) {
+        if (this.km > KmDevuelto) {
+            System.out.println("El número de KM es menor que los KM que tenía");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 }

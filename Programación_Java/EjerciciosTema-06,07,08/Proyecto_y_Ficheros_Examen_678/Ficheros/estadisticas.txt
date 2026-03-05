@@ -1,0 +1,13 @@
+*************************************************************************
+             ESTADÍSTICAS CURSO 2025/26      
+*************************************************************************
+PORCENTAJES DE APROBADOS/SUSPENSOS POR ASIGNATURA
+Aprobados Java: 50%
+Suspensos Java: 50%
+Aprobados BBDD: 75%
+Suspensos BBDD: 25%
+-------------------------------------------------------------------------
+Aprobados Programación Multimedia: 100%
+Suspensos Programación Multimedia: 0%
+Aprobados Programación de Servicios: 40%
+Suspensos Programación de Servicios: 60%
