@@ -1,0 +1,67 @@
+PELÍCULA:
+	ID: 1
+	Titulo: El Caballero Oscuro
+	Género: Acción
+	Edad Mínima: 16
+	DIRECTOR:
+	ID: 17
+	Nombre: Christopher Nolan
+	Edad: 53
+	Nº Películas: 10
+
+	Precio entrada: 2.0
+	Dinero recaudado: 28.0
+----------------------------------------------------
+ASIENTO:
+	Ubicacion: 30
+	ESPECTADOR:
+	ID: 15
+	Nombre: Silvia
+	Edad: 18
+	Dinero: 2.5
+	¿Está sentado?: SI
+ASIENTO:
+	Ubicacion: 31
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 32
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 33
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 20
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 21
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 22
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 23
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 10
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 11
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 12
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 13
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 00
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 01
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 02
+		Asiento Vacio
+ASIENTO:
+	Ubicacion: 03
+		Asiento Vacio

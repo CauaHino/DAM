@@ -1,0 +1,28 @@
+Turismo
+Audi A3
+1111AAA
+55000
+Furgoneta
+VolksWagen Transporter
+2222BBBB
+98000
+7
+Turismo
+Peugeot 308
+3333CCC
+88000
+Camion
+Mercedes AT3
+4444DDD
+195000
+false
+Furgoneta
+Fiat Dobló
+55555EEE
+154000
+9
+Camion
+IVECO
+6666FFF
+275000
+true

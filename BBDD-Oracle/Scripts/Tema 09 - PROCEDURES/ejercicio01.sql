@@ -70,3 +70,84 @@ end;
 
 -- Punto 11
 select * from empleados_antiguos;
+
+-- EJERCICIO 02
+-- Punto 1
+create or replace procedure pa_empleado_aumentarsueldo(ayear in number, aporcentaje in number) as
+begin
+    update empleados set sueldo+(sueldo*aporcentaje/100)
+    where (extract(year from current_date) - extract(year from fechaingreso)) > ayear;
+end;
+/
+-- Punto 2
+begin 
+    pa_empleado_aumentarsueldo(10,20);
+end;
+/
+-- Punto 3
+select * from empleados;
+
+-- Punto 4
+begin 
+    pa_empleado_aumentarsueldo(8,10);
+end;
+/
+
+-- Punto 5
+select * from empleados;
+
+-- Punto 6
+begin 
+    pa_empleado_aumentarsueldo(8,10);
+end;
+/
+
+-- Punto 7
+create or replace procedure pa_empleados_ingresar(adocumento in empleados.documento%type, anombre in empleados.nombre%type, aapellidos in empleados.apellido%type) as
+begin
+    insert into empleados(documento, nombre, apellido) values(adocumento, anombre, aapellidos);
+end;
+/
+
+begin
+    pa_empleados_ingresar('3000000', 'Ana', 'Gomez');
+end;
+/
+
+select * from empleados;
+
+-- Parte 09
+create or replace procedure pa_empleados_ingresar
+    (adocumento in empleados.documento%type default null, afecha in empleados.fechaIngreso%type default current_date) as
+begin
+    insert into empleados (documento, fechaIngreso) values (adocumento, afecha);
+end;
+/
+
+-- Parte 10
+exec pa_empleados_ingresar('30000001', '01/01/2020');
+
+select * from empleados;
+
+-- Parte 11
+exec pa_empleados_ingresar('15/01/2020');
+
+/*
+Oracle no permite ejecutar el procedimiento de la parte 11 porque el primer 
+parámetro es obligatorio, aunque tenga un valor por defecto. Para solucionar 
+esto, se podría modificar el procedimiento para que el primer parámetro sea 
+opcional, de la siguiente manera:
+*/
+
+-- punto 12
+create or replace procedure pa_eliminar_empleado(adocumento in varchar2) as
+begin
+    delete from empleados where documento = adocumento;
+end;
+/
+
+-- punto 13
+begin
+    pa_eliminar_empleado('3000000');
+end;
+/

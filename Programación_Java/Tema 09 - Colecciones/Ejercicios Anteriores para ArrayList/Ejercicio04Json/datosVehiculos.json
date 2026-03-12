@@ -1,0 +1,42 @@
+[
+  {
+    "tipo": "Turismo",
+    "marca": "Audi A3",
+    "matricula": "1111AAA",
+    "kmActuales": 55000
+  },
+  {
+    "tipo": "Furgoneta",
+    "marca": "VolksWagen Transporter",
+    "matricula": "2222BBBB",
+    "kmActuales": 98000,
+    "numPlazas": 7
+  },
+  {
+    "tipo": "Turismo",
+    "marca": "Peugeot 308",
+    "matricula": "3333CCC",
+    "kmActuales": 88000
+  },
+  {
+    "tipo": "Camion",
+    "marca": "Mercedes AT3",
+    "matricula": "4444DDD",
+    "kmActuales": 195000,
+    "tieneGrua": false
+  },
+  {
+    "tipo": "Furgoneta",
+    "marca": "Fiat Dobló",
+    "matricula": "55555EEE",
+    "kmActuales": 154000,
+    "numPlazas": 9
+  },
+  {
+    "tipo": "Camion",
+    "marca": "IVECO",
+    "matricula": "6666FFF",
+    "kmActuales": 275000,
+    "tieneGrua": true
+  }
+]

@@ -1,0 +1,86 @@
+TREN: 	ID: 1
+	LOCOMOTORA: 
+	Marca: SNBC
+	Modelo: LC222
+	Tipo: Diesel
+	Potencia: 1330.0kW
+	VAGÓN DE PASAJEROS:
+	ID: 1
+	Marca: IberTren
+	Modelo: VP456
+	Asientos Disponibles: 0
+
+PASAJERO: 
+	Nombre: Alexander
+	Billete: BI111
+	¿Está montado en algún vagón?: SI
+	
+PASAJERO: 
+	Nombre: Carmen
+	Billete: BI222
+	¿Está montado en algún vagón?: SI
+	
+	VAGÓN DE PASAJEROS:
+	ID: 4
+	Marca: MerTren
+	Modelo: VP222
+	Asientos Disponibles: 0
+
+PASAJERO: 
+	Nombre: Antonio
+	Billete: BI333
+	¿Está montado en algún vagón?: SI
+	
+PASAJERO: 
+	Nombre: Alicia
+	Billete: BI444
+	¿Está montado en algún vagón?: SI
+	
+TREN: 	ID: 2
+	LOCOMOTORA: 
+	Marca: Mercedes
+	Modelo: LC123
+	Tipo: Eléctrica
+	Potencia: 5400.0kW
+	VAGÓN DE MERCANCIAS:
+	ID: 2
+	Marca: ElectroTren
+	Modelo: VM789
+	Capacidad: 31500.0Kg
+	VAGÓN DE MERCANCIAS:
+	ID: 5
+	Marca: KTrain
+	Modelo: VM555
+	Capacidad: 41800.0Kg
+	VAGÓN DE MERCANCIAS:
+	ID: 8
+	Marca: N-Train
+	Modelo: VM666
+	Capacidad: 42100.0Kg
+TREN: 	ID: 3
+	LOCOMOTORA: 
+	Marca: Mercedes
+	Modelo: LC123
+	Tipo: Eléctrica
+	Potencia: 5400.0kW
+	VAGÓN DE MERCANCIAS:
+	ID: 3
+	Marca: ElectroTren
+	Modelo: VM789
+	Capacidad: 31500.0Kg
+	VAGÓN DE MERCANCIAS:
+	ID: 6
+	Marca: KTrain
+	Modelo: VM555
+	Capacidad: 41800.0Kg
+	VAGÓN DE MERCANCIAS:
+	ID: 9
+	Marca: N-Train
+	Modelo: VM666
+	Capacidad: 42100.0Kg
+	VAGÓN DE PASAJEROS:
+	ID: 7
+	Marca: MfTrain
+	Modelo: VP333
+	Asientos Disponibles: 2
+
