@@ -1,6 +1,7 @@
 package main;
 
 import java.io.*;
+import java.util.ArrayList;
 
 import Personas.*;
 import cine.Cine;
@@ -11,20 +12,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		Cine cine = new Cine(4, 4, null, 2);
-		Espectadores[] espectadores = new Espectadores[16];
+		ArrayList<Espectadores> espectadores = new ArrayList<>();
 		Director director = null;
 
 		try (BufferedReader br = new BufferedReader(new FileReader("datosPersonas.txt"))) {
 			String linea = "", nombre = "", edad = "", dinero = "", numFilmes = "";
 			linea = br.readLine();
 
-			for (int i = 0; i < espectadores.length + 1 && linea != null; i++) {
+			while (linea != null) {
 				if ("Espectador".equalsIgnoreCase(linea)) {
 					nombre = br.readLine();
 					edad = br.readLine();
 					dinero = br.readLine();
 
-					espectadores[i] = new Espectadores(nombre, Integer.parseInt(edad), Double.parseDouble(dinero));
+					espectadores.add(new Espectadores(nombre, Integer.parseInt(edad), Double.parseDouble(dinero)));
 				} else if ("Director".equalsIgnoreCase(linea)) {
 					nombre = br.readLine();
 					edad = br.readLine();
@@ -64,31 +65,30 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		try {
-			double dineroRecaudado= 0;
-			for (int i = cine.getAsientos().length - 1; i >= 0; i--) {
-				for (int j = 0; j < cine.getAsientos()[0].length; j++) {
-					for(Espectadores e : espectadores)
-					if (cine.puedeEntrar(e)) {
-						cine.sentar(i, j, e);
-						dineroRecaudado += cine.getPrecioEntrada();
-						cine.setDineroRecaudado(dineroRecaudado);
+		double dineroRecaudado = 0;
+		for (int i = cine.getAsientos().length - 1; i >= 0; i--) {
+			for (int j = 0; j < cine.getAsientos()[0].length; j++) {
+				for (Espectadores e : espectadores) {
+					try {
+						if (cine.puedeEntrar(e) && !e.isEstaSentado()) {
+								cine.sentar(i, j, e);
+								dineroRecaudado += cine.getPrecioEntrada();
+								cine.setDineroRecaudado(dineroRecaudado);
+								break;
 					}
-					break;
+						} catch (EdadRecomendada e1) {
+						// TODO Auto-generated catch block
+						System.err.println(e1);
+					}
 				}
 			}
-		} catch (EdadRecomendada e) {
-			System.err.println(e);
-		}
-		
-		try(BufferedWriter bw = new BufferedWriter(new FileWriter("InfoCine.txt"))){
-			bw.write(cine.escribirInfo());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
-	}
+			try (BufferedWriter bw = new BufferedWriter(new FileWriter("InfoCine.txt"))) {
+				bw.write(cine.escribirInfo());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
-}
+		}
+}}

@@ -32,16 +32,28 @@ public class Imobiliaria {
 			}
 		}
 	}
-	public static void compararImpuesto(ArrayList) {
-		double impuesto = 0;
-		int aux = 0;
-		for (int i = 0; i < v.length; i++) {
-			if (v[i].impuesto() > impuesto) {
-				impuesto = v[i].impuesto();
-				aux = i;
+
+	public static void compararImpuesto(ArrayList<Vivienda> lista) {
+		double impuestoMaximo = 0;
+		int indiceMayor = 0;
+
+		for (int i = 0; i < lista.size(); i++) {
+			// Usamos .get(i) para acceder al objeto
+			if (lista.get(i).impuesto() > impuestoMaximo) {
+				impuestoMaximo = lista.get(i).impuesto();
+				indiceMayor = i;
 			}
 		}
-		System.out.println("La vivenda con el impuesto más grande es " + v[aux].toString());
 
+		System.out.println("La vivienda con el impuesto más grande es: " + lista.get(indiceMayor).toString());
 	}
+
+	public ArrayList<Vivienda> getViviendas() {
+		return viviendas;
+	}
+
+	public void setViviendas(ArrayList<Vivienda> viviendas) {
+		this.viviendas = viviendas;
+	}
+	
 }

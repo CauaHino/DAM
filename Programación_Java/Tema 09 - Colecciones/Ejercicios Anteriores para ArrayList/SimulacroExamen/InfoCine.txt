@@ -15,50 +15,115 @@ PELÍCULA:
 ASIENTO:
 	Ubicacion: 30
 	ESPECTADOR:
-	ID: 15
-	Nombre: Silvia
-	Edad: 18
-	Dinero: 2.5
+	ID: 1
+	Nombre: Pepe
+	Edad: 20
+	Dinero: 1.5
 	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 31
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 2
+	Nombre: Ana
+	Edad: 35
+	Dinero: 0.0
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 32
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 3
+	Nombre: Raquel
+	Edad: 17
+	Dinero: 1.5
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 33
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 4
+	Nombre: Fernando
+	Edad: 28
+	Dinero: 1.5
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 20
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 5
+	Nombre: Felipe
+	Edad: 41
+	Dinero: 1.0
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 21
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 6
+	Nombre: Juan
+	Edad: 18
+	Dinero: 1.5
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 22
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 8
+	Nombre: Miguel
+	Edad: 24
+	Dinero: 0.5
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 23
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 9
+	Nombre: Antonio
+	Edad: 33
+	Dinero: 1.5999999999999996
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 10
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 10
+	Nombre: Jose
+	Edad: 38
+	Dinero: 1.5
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 11
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 11
+	Nombre: Maite
+	Edad: 52
+	Dinero: 9.0
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 12
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 12
+	Nombre: Pedro
+	Edad: 26
+	Dinero: 6.0
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 13
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 13
+	Nombre: Esther
+	Edad: 44
+	Dinero: 23.4
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 00
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 14
+	Nombre: Isaac
+	Edad: 19
+	Dinero: 15.5
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 01
-		Asiento Vacio
+	ESPECTADOR:
+	ID: 15
+	Nombre: Silvia
+	Edad: 18
+	Dinero: 0.5
+	¿Está sentado?: SI
 ASIENTO:
 	Ubicacion: 02
 		Asiento Vacio

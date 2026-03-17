@@ -1,6 +1,7 @@
 package mian;
 
 import java.io.*;
+import java.util.ArrayList;
 
 import clientes.Cliente;
 import vehiculos.*;
@@ -8,8 +9,8 @@ import vehiculos.*;
 public class Main {
 
 	public static void main(String[] args) {
-		Cliente[] clientes = new Cliente[5];
-		Vehiculo[] vehiculos = new Vehiculo[6];
+		ArrayList<Cliente> clientes = new ArrayList<>();
+		ArrayList<Vehiculo> vehiculos = new ArrayList<>();
 
 		String matricula = "";
 		String marca = "";
@@ -20,13 +21,13 @@ public class Main {
 			String linea = "";
 			linea = br.readLine();
 
-			for (int i = 0; i < vehiculos.length && linea != null; i++) {
+			while(linea != null) {
 				if ("Turismo".equalsIgnoreCase(linea)) {
 					marca = br.readLine();
 					matricula = br.readLine();
 					km = br.readLine();
 
-					vehiculos[i] = new Turismo(matricula, marca, Double.parseDouble(km));
+					vehiculos.add(new Turismo(matricula, marca, Double.parseDouble(km)));
 
 				} else if ("Camion".equalsIgnoreCase(linea)) {
 					marca = br.readLine();
@@ -34,7 +35,7 @@ public class Main {
 					km = br.readLine();
 					grua = br.readLine();
 
-					vehiculos[i] = new Camion(matricula, marca, Double.parseDouble(km), Boolean.parseBoolean(grua));
+					vehiculos.add(new Camion(matricula, marca, Double.parseDouble(km), Boolean.parseBoolean(grua)));
 
 				} else if ("Furgoneta".equalsIgnoreCase(linea)) {
 					marca = br.readLine();
@@ -42,8 +43,8 @@ public class Main {
 					km = br.readLine();
 					numPlazas = br.readLine();
 
-					vehiculos[i] = new Furgonetas(matricula, marca, Double.parseDouble(km),
-							Integer.parseInt(numPlazas));
+					vehiculos.add(new Furgonetas(matricula, marca, Double.parseDouble(km),
+							Integer.parseInt(numPlazas)));
 				}
 				linea = br.readLine();
 
@@ -62,15 +63,15 @@ public class Main {
 			String linea = "";
 			linea = br.readLine();
 
-			for (int i = 0; i < clientes.length && linea != null; i++) {
+			while(linea != null) {
 				nombre = br.readLine();
 				dni = br.readLine();
 				carnetTurismo = br.readLine();
 				carnetFurgoneta = br.readLine();
 				carnetCamion = br.readLine();
 
-				clientes[i] = new Cliente(nombre, dni, Boolean.parseBoolean(carnetTurismo),
-						Boolean.parseBoolean(carnetFurgoneta), Boolean.parseBoolean(carnetCamion));
+				clientes.add(new Cliente(nombre, dni, Boolean.parseBoolean(carnetTurismo),
+						Boolean.parseBoolean(carnetFurgoneta), Boolean.parseBoolean(carnetCamion)));
 
 				linea = br.readLine();
 			}
@@ -81,19 +82,15 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		for (Cliente c : clientes) {
-			System.out.println(c);
-		}
-
 		for (Vehiculo v : vehiculos) {
-			System.out.println(v);
-		}
-		for (int i = 0; i < clientes.length && i < vehiculos.length; i++) {
-			vehiculos[i].alquilar(clientes[i]);
+			for(Cliente c : clientes)
+			v.alquilar(c);
 		}
 
 		for (Cliente c : clientes) {
-			System.out.println(c);
+			if(c.getVehiculoAlquilado() != null) {
+				System.out.println(c);
+			}
 		}
 
 		for (Vehiculo v : vehiculos) {

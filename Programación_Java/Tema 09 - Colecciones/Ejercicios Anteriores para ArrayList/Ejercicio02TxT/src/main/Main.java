@@ -7,10 +7,8 @@ import electrodomestico.*;
 public class Main {
 
     public static void main(String[] args) {
-        // 1. Inicializamos la lista
         ArrayList<Electrodomestico> electrodomesticos = new ArrayList<>();
 
-        // 2. Leemos el archivo y añadimos objetos dinámicamente
         try (BufferedReader br = new BufferedReader(new FileReader("electrodomesticos.txt"))) {
             String linea;
             
@@ -22,7 +20,6 @@ public class Main {
                     String color = br.readLine();
                     double carga = Double.parseDouble(br.readLine());
 
-                    // Creamos el objeto y lo añadimos a la lista
                     Lavadora la = new Lavadora(precio, peso, consumo, color, carga);
                     electrodomesticos.add(la);
 
@@ -30,7 +27,6 @@ public class Main {
                     double precio = Double.parseDouble(br.readLine());
                     double peso = Double.parseDouble(br.readLine());
                     
-                    // Asumiendo un constructor que solo reciba precio y peso
                     electrodomesticos.add(new Lavadora(precio, peso));
 
                 } else if ("television".equalsIgnoreCase(linea)) {
@@ -56,7 +52,6 @@ public class Main {
             e.printStackTrace();
         }
 
-        // 3. Mostrar resultados
         System.out.println("--- Listado de Electrodomésticos ---");
         for (Electrodomestico e : electrodomesticos) {
             System.out.println(e.toString());
