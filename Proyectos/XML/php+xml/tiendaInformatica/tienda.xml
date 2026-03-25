@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TIENDA_INFORMATICA>
+    
+    <!-- CATEGORÍA: PORTÁTILES -->
+    <PRODUCTOS>
+        <PORTATIL id="P001">
+            <MARCA>Lenovo</MARCA>
+            <MODELO>IdeaPad 3</MODELO>
+            <PROCESADOR>Intel Core i5</PROCESADOR>
+            <RAM>8 GB</RAM>
+            <ALMACENAMIENTO>512 GB SSD</ALMACENAMIENTO>
+            <PRECIO>599.99</PRECIO>
+            <STOCK>15</STOCK>
+        </PORTATIL>
+        
+        <PORTATIL id="P002">
+            <MARCA>HP</MARCA>
+            <MODELO>Pavilion 15</MODELO>
+            <PROCESADOR>AMD Ryzen 7</PROCESADOR>
+            <RAM>16 GB</RAM>
+            <ALMACENAMIENTO>1 TB SSD</ALMACENAMIENTO>
+            <PRECIO>799.99</PRECIO>
+            <STOCK>8</STOCK>
+        </PORTATIL>
+        
+        <!-- CATEGORÍA: COMPONENTES -->
+        <COMPONENTE id="C001">
+            <TIPO>Memoria RAM</TIPO>
+            <MARCA>Corsair</MARCA>
+            <MODELO>Vengeance LPX</MODELO>
+            <CAPACIDAD>16 GB DDR4</CAPACIDAD>
+            <PRECIO>89.99</PRECIO>
+            <STOCK>25</STOCK>
+        </COMPONENTE>
+        
+        <COMPONENTE id="C002">
+            <TIPO>Disco Duro SSD</TIPO>
+            <MARCA>Samsung</MARCA>
+            <MODELO>980 EVO</MODELO>
+            <CAPACIDAD>1 TB NVMe</CAPACIDAD>
+            <PRECIO>129.99</PRECIO>
+            <STOCK>12</STOCK>
+        </COMPONENTE>
+        
+        <!-- CATEGORÍA: PERIFÉRICOS -->
+        <PERIFERICO id="PE001">
+            <TIPO>Ratón</TIPO>
+            <MARCA>Logitech</MARCA>
+            <MODELO>G502 Hero</MODELO>
+            <CONEXION>USB</CONEXION>
+            <PRECIO>49.99</PRECIO>
+            <STOCK>30</STOCK>
+        </PERIFERICO>
+        
+        <PERIFERICO id="PE002">
+            <TIPO>Teclado</TIPO>
+            <MARCA>Razer</MARCA>
+            <MODELO>BlackWidow</MODELO>
+            <CONEXION>USB Mecánico</CONEXION>
+            <PRECIO>89.99</PRECIO>
+            <STOCK>18</STOCK>
+        </PERIFERICO>
+        
+        <!-- CATEGORÍA: MONITORES -->
+        <MONITOR id="M001">
+            <MARCA>Samsung</MARCA>
+            <MODELO>Odyssey G3</MODELO>
+            <TAMAÑO>27 pulgadas</TAMAÑO>
+            <RESOLUCION>1920x1080</RESOLUCION>
+            <FRECUENCIA>144 Hz</FRECUENCIA>
+            <PRECIO>249.99</PRECIO>
+            <STOCK>7</STOCK>
+        </MONITOR>
+        
+        <MONITOR id="M002">
+            <MARCA>LG</MARCA>
+            <MODELO>UltraGear</MODELO>
+            <TAMAÑO>32 pulgadas</TAMAÑO>
+            <RESOLUCION>2560x1440</RESOLUCION>
+            <FRECUENCIA>165 Hz</FRECUENCIA>
+            <PRECIO>399.99</PRECIO>
+            <STOCK>5</STOCK>
+        </MONITOR>
+    </PRODUCTOS>
+    
+    <!-- INFORMACIÓN DE LA TIENDA -->
+    <INFORMACION>
+        <NOMBRE>TechStore Informática</NOMBRE>
+        <DIRECCION>Calle Tecnología, 123</DIRECCION>
+        <TELEFONO>+34 912 345 678</TELEFONO>
+        <EMAIL>info@techstore.com</EMAIL>
+        <HORARIO>
+            <DIAS>Lunes a Viernes</DIAS>
+            <HORAS>10:00 - 20:00</HORAS>
+        </HORARIO>
+    </INFORMACION>
+    
+    <!-- PROVEEDORES -->
+    <PROVEEDORES>
+        <PROVEEDOR id="PR001">
+            <NOMBRE>Componentes Global SL</NOMBRE>
+            <TELEFONO>+34 945 678 901</TELEFONO>
+            <EMAIL>ventas@componentesglobal.com</EMAIL>
+            <PRODUCTOS_SUMINISTRA>
+                <PRODUCTO_REF>P001</PRODUCTO_REF>
+                <PRODUCTO_REF>C001</PRODUCTO_REF>
+                <PRODUCTO_REF>PE001</PRODUCTO_REF>
+            </PRODUCTOS_SUMINISTRA>
+        </PROVEEDOR>
+        
+        <PROVEEDOR id="PR002">
+            <NOMBRE>Distribuciones Tech SA</NOMBRE>
+            <TELEFONO>+34 956 789 012</TELEFONO>
+            <EMAIL>pedidos@distribucionestech.com</EMAIL>
+            <PRODUCTOS_SUMINISTRA>
+                <PRODUCTO_REF>P002</PRODUCTO_REF>
+                <PRODUCTO_REF>C002</PRODUCTO_REF>
+                <PRODUCTO_REF>M001</PRODUCTO_REF>
+                <PRODUCTO_REF>M002</PRODUCTO_REF>
+            </PRODUCTOS_SUMINISTRA>
+        </PROVEEDOR>
+    </PROVEEDORES>
+    
+</TIENDA_INFORMATICA>

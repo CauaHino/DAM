@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="clientes.xsl"?>
+<!DOCTYPE clientes SYSTEM "clientes.dtd">
+
+<clientes empresa="Soluciones Tecnológicas S.A." fecha_creacion="2024-01-15">
+  
+  <!-- Clientes activos -->
+  <cliente id="CLI001" estado="activo">
+    <datos_personales>
+      <nombre>María González López</nombre>
+      <fecha_nacimiento>1985-03-15</fecha_nacimiento>
+      <genero>Femenino</genero>
+      <nacionalidad>Española</nacionalidad>
+    </datos_personales>
+    
+    <contacto>
+      <email>maria.gonzalez@email.com</email>
+      <telefono tipo="movil">+34 612 345 678</telefono>
+      <telefono tipo="fijo">+34 93 123 45 67</telefono>
+      <direccion>
+        <calle>Av. Diagonal 123</calle>
+        <ciudad>Barcelona</ciudad>
+        <provincia>Barcelona</provincia>
+        <codigo_postal>08018</codigo_postal>
+        <pais>España</pais>
+      </direccion>
+    </contacto>
+    
+    <informacion_empresarial>
+      <empresa>Tech Solutions SL</empresa>
+      <cargo>Directora de Proyectos</cargo>
+      <nif>B-12345678</nif>
+    </informacion_empresarial>
+    
+    <historial_compras>
+      <compra fecha="2023-12-10" total="1250.00" estado="entregado">
+        <producto codigo="SRV001">Servicio Cloud Premium</producto>
+        <producto codigo="LIC002">Licencia Enterprise</producto>
+      </compra>
+      <compra fecha="2024-01-05" total="450.00" estado="pendiente">
+        <producto codigo="CON003">Consultoría SEO</producto>
+      </compra>
+    </historial_compras>
+    
+    <preferencias>
+      <categoria preferida="Tecnología">Cloud Computing</categoria>
+      <categoria preferida="Servicios">Consultoría</categoria>
+      <newsletter>true</newsletter>
+      <idioma>es</idioma>
+    </preferencias>
+  </cliente>
+
+  <cliente id="CLI002" estado="activo">
+    <datos_personales>
+      <nombre>Carlos Rodríguez Méndez</nombre>
+      <fecha_nacimiento>1978-08-22</fecha_nacimiento>
+      <genero>Masculino</genero>
+      <nacionalidad>Mexicana</nacionalidad>
+    </datos_personales>
+    
+    <contacto>
+      <email>carlos.rodriguez@email.com</email>
+      <telefono tipo="movil">+52 55 9876 5432</telefono>
+      <direccion>
+        <calle>Paseo de la Reforma 456</calle>
+        <ciudad>Ciudad de México</ciudad>
+        <provincia>CDMX</provincia>
+        <codigo_postal>06600</codigo_postal>
+        <pais>México</pais>
+      </direccion>
+    </contacto>
+    
+    <informacion_empresarial>
+      <empresa>Innova Corp</empresa>
+      <cargo>CEO</cargo>
+      <rfc>ROMC780822XXX</rfc>
+    </informacion_empresarial>
+    
+    <historial_compras>
+      <compra fecha="2023-11-20" total="3500.00" estado="entregado">
+        <producto codigo="HW001">Servidores Cloud</producto>
+        <producto codigo="SRV002">Soporte 24/7</producto>
+      </compra>
+    </historial_compras>
+    
+    <preferencias>
+      <categoria preferida="Hardware">Infraestructura</categoria>
+      <newsletter>true</newsletter>
+      <idioma>es</idioma>
+    </preferencias>
+  </cliente>
+
+  <cliente id="CLI003" estado="inactivo">
+    <datos_personales>
+      <nombre>Ana Patricia Suárez</nombre>
+      <fecha_nacimiento>1990-11-03</fecha_nacimiento>
+      <genero>Femenino</genero>
+      <nacionalidad>Colombiana</nacionalidad>
+    </datos_personales>
+    
+    <contacto>
+      <email>ana.suarez@email.com</email>
+      <telefono tipo="movil">+57 315 789 1234</telefono>
+      <direccion>
+        <calle>Carrera 15 # 88-45</calle>
+        <ciudad>Bogotá</ciudad>
+        <provincia>Cundinamarca</provincia>
+        <codigo_postal>110221</codigo_postal>
+        <pais>Colombia</pais>
+      </direccion>
+    </contacto>
+    
+    <informacion_empresarial>
+      <empresa>Marketing Digital SAS</empresa>
+      <cargo>Directora de Marketing</cargo>
+      <nit>901.234.567-8</nit>
+    </informacion_empresarial>
+    
+    <historial_compras>
+      <compra fecha="2023-09-05" total="890.00" estado="entregado">
+        <producto codigo="MRK001">Campaña Google Ads</producto>
+      </compra>
+    </historial_compras>
+    
+    <preferencias>
+      <categoria preferida="Marketing">Publicidad Digital</categoria>
+      <newsletter>false</newsletter>
+      <idioma>es</idioma>
+    </preferencias>
+  </cliente>
+
+  <cliente id="CLI004" estado="activo">
+    <datos_personales>
+      <nombre>Robert Johnson</nombre>
+      <fecha_nacimiento>1982-05-17</fecha_nacimiento>
+      <genero>Masculino</genero>
+      <nacionalidad>Estadounidense</nacionalidad>
+    </datos_personales>
+    
+    <contacto>
+      <email>r.johnson@email.com</email>
+      <telefono tipo="movil">+1 305 555 0199</telefono>
+      <direccion>
+        <calle>123 Main Street</calle>
+        <ciudad>Miami</ciudad>
+        <provincia>Florida</provincia>
+        <codigo_postal>33101</codigo_postal>
+        <pais>Estados Unidos</pais>
+      </direccion>
+    </contacto>
+    
+    <informacion_empresarial>
+      <empresa>Johnson y Associates</empresa>
+      <cargo>Consultor Senior</cargo>
+      <ein>XX-XXXXXXX</ein>
+    </informacion_empresarial>
+    
+    <historial_compras>
+      <compra fecha="2024-01-12" total="2300.00" estado="procesando">
+        <producto codigo="SRV003">Desarrollo Web Personalizado</producto>
+      </compra>
+    </historial_compras>
+    
+    <preferencias>
+      <categoria preferida="Desarrollo">Web Development</categoria>
+      <newsletter>true</newsletter>
+      <idioma>en</idioma>
+    </preferencias>
+  </cliente>
+
+  <!-- Resumen estadístico -->
+  <estadisticas>
+    <total_clientes>4</total_clientes>
+    <clientes_activos>3</clientes_activos>
+    <clientes_inactivos>1</clientes_inactivos>
+    <ventas_totales>8490.00</ventas_totales>
+  </estadisticas>
+  
+</clientes>

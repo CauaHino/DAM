@@ -1,0 +1,59 @@
+TREN: 	ID: 1
+		LOCOMOTORA: 
+	ID: 2
+	Marca: SNBC
+	Modelo: LC222
+	Tipo: Diesel
+	Potencia: 1330.0 kW
+
+	VAGÓN DE PASAJEROS: 
+	ID 1, IberTren, VP456 con 0 asientos disponibles y con pasajeros: 
+	PASAJERO:
+	Nombre: Alexander	Billete BI111	¿Está montado en algún vagón? SI	IDVagon: 1
+	PASAJERO:
+	Nombre: Carmen	Billete BI222	¿Está montado en algún vagón? SI	IDVagon: 1
+
+	VAGÓN DE PASAJEROS: 
+	ID 4, MerTren, VP222 con 0 asientos disponibles y con pasajeros: 
+	PASAJERO:
+	Nombre: Antonio	Billete BI333	¿Está montado en algún vagón? SI	IDVagon: 4
+	PASAJERO:
+	Nombre: Alicia	Billete BI444	¿Está montado en algún vagón? SI	IDVagon: 4
+
+TREN: 	ID: 2
+		LOCOMOTORA: 
+	ID: 1
+	Marca: Mercedes
+	Modelo: LC123
+	Tipo: Eléctrica
+	Potencia: 5400.0 kW
+
+	VAGÓN DE MERCANCÍAS: 
+	ID 2, ElectroTren, VM789 y de capacidad 31500.0
+
+	VAGÓN DE MERCANCÍAS: 
+	ID 5, KTrain, VM555 y de capacidad 41800.0
+
+	VAGÓN DE MERCANCÍAS: 
+	ID 8, N-Train, VM666 y de capacidad 42100.0
+
+TREN: 	ID: 3
+		LOCOMOTORA: 
+	ID: 1
+	Marca: Mercedes
+	Modelo: LC123
+	Tipo: Eléctrica
+	Potencia: 5400.0 kW
+
+	VAGÓN DE MERCANCÍAS: 
+	ID 3, ElectroTren, VM789 y de capacidad 31500.0
+
+	VAGÓN DE MERCANCÍAS: 
+	ID 6, KTrain, VM555 y de capacidad 41800.0
+
+	VAGÓN DE MERCANCÍAS: 
+	ID 9, N-Train, VM666 y de capacidad 42100.0
+
+	VAGÓN DE PASAJEROS: 
+	ID 7, MfTrain, VP333 con 2 asientos disponibles y con pasajeros: 
+
