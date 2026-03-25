@@ -337,7 +337,7 @@ public class Main {
 					t.setLocomotora(locomotora);
 					ArrayList<Vagon> vagonesPasajerosBBDD = vagonDAO.readVagonesPasajeros(t.getIdentificador());
 					for(Vagon v : vagonesPasajerosBBDD) {
-						t.setVagones(v);
+						
 					}
 					
 				}
