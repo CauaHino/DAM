@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rutas.xsl"?>
+
+<flota_vehiculos empresa="Transportes del Norte S.A." fecha_actualizacion="2024-01-15">
+  
+  <!-- Camiones de la flota -->
+  <camion matricula="1234-ABC" estado="activo" año_fabricacion="2020">
+    <datos_tecnicos>
+      <marca>Volvo</marca>
+      <modelo>FH500</modelo>
+      <color>Blanco</color>
+      <motor>D13K500</motor>
+      <potencia>500 CV</potencia>
+      <cilindrada>12777 cc</cilindrada>
+    </datos_tecnicos>
+    
+    <dimensiones>
+      <peso_maximo>26000 kg</peso_maximo>
+      <longitud>16.5 m</longitud>
+      <capacidad_carga>13000 kg</capacidad_carga>
+      <numero_ejes>3</numero_ejes>
+    </dimensiones>
+    
+    <mantenimiento>
+      <ultima_revision fecha="2023-11-15" taller="Talleres Centrales">
+        <kilometraje>145230</kilometraje>
+        <trabajo_realizado>Cambio de aceite y filtros</trabajo_realizado>
+      </ultima_revision>
+      <proxima_revision fecha="2024-02-15">
+        <kilometraje_estimado>155230</kilometraje_estimado>
+        <tipo>Revisión general</tipo>
+      </proxima_revision>
+    </mantenimiento>
+    
+    <conductores>
+      <conductor principal="si">
+        <nombre>Juan Martínez García</nombre>
+        <licencia>B+E</licencia>
+        <antiguedad>8 años</antiguedad>
+      </conductor>
+      <conductor principal="no">
+        <nombre>Pedro Sánchez López</nombre>
+        <licencia>C+E</licencia>
+        <antiguedad>5 años</antiguedad>
+      </conductor>
+    </conductores>
+  </camion>
+  
+  <camion matricula="5678-DEF" estado="activo" año_fabricacion="2022">
+    <datos_tecnicos>
+      <marca>Mercedes-Benz</marca>
+      <modelo>Actros 1845</modelo>
+      <color>Azul</color>
+      <motor>OM471</motor>
+      <potencia>450 CV</potencia>
+      <cilindrada>12809 cc</cilindrada>
+    </datos_tecnicos>
+    
+    <dimensiones>
+      <peso_maximo>18000 kg</peso_maximo>
+      <longitud>12.8 m</longitud>
+      <capacidad_carga>8500 kg</capacidad_carga>
+      <numero_ejes>2</numero_ejes>
+    </dimensiones>
+    
+    <mantenimiento>
+      <ultima_revision fecha="2023-12-10" taller="Taller Norte">
+        <kilometraje>89250</kilometraje>
+        <trabajo_realizado>Revisión de frenos y neumáticos</trabajo_realizado>
+      </ultima_revision>
+      <proxima_revision fecha="2024-03-10">
+        <kilometraje_estimado>99250</kilometraje_estimado>
+        <tipo>Mantenimiento mayor</tipo>
+      </proxima_revision>
+    </mantenimiento>
+    
+    <conductores>
+      <conductor principal="si">
+        <nombre>María López Fernández</nombre>
+        <licencia>C+E</licencia>
+        <antiguedad>6 años</antiguedad>
+      </conductor>
+    </conductores>
+  </camion>
+  
+  <camion matricula="9012-GHI" estado="mantenimiento" año_fabricacion="2018">
+    <datos_tecnicos>
+      <marca>Scania</marca>
+      <modelo>R450</modelo>
+      <color>Rojo</color>
+      <motor>DC13</motor>
+      <potencia>450 CV</potencia>
+      <cilindrada>12742 cc</cilindrada>
+    </datos_tecnicos>
+    
+    <dimensiones>
+      <peso_maximo>26000 kg</peso_maximo>
+      <longitud>16.2 m</longitud>
+      <capacidad_carga>13500 kg</capacidad_carga>
+      <numero_ejes>3</numero_ejes>
+    </dimensiones>
+    
+    <mantenimiento>
+      <ultima_revision fecha="2023-10-05" taller="Taller Sur">
+        <kilometraje>210450</kilometraje>
+        <trabajo_realizado>Cambio de correa de distribución</trabajo_realizado>
+      </ultima_revision>
+      <proxima_revision fecha="2024-01-20">
+        <kilometraje_estimado>220450</kilometraje_estimado>
+        <tipo>Revisión de motor</tipo>
+      </proxima_revision>
+    </mantenimiento>
+    
+    <conductores>
+      <conductor principal="si">
+        <nombre>Antonio Ruiz Díaz</nombre>
+        <licencia>C+E</licencia>
+        <antiguedad>10 años</antiguedad>
+      </conductor>
+    </conductores>
+  </camion>
+  
+  <!-- Rutas realizadas -->
+  <rutas>
+    <ruta id="R001" fecha="2024-01-10" estado="completada">
+      <camion_asignado matricula="1234-ABC" />
+      <conductor_asignado>Juan Martínez García</conductor_asignado>
+      <recorrido>
+        <origen>
+          <ciudad>Madrid</ciudad>
+          <provincia>Madrid</provincia>
+          <codigo_postal>28001</codigo_postal>
+          <pais>España</pais>
+        </origen>
+        <destino>
+          <ciudad>Barcelona</ciudad>
+          <provincia>Barcelona</provincia>
+          <codigo_postal>08001</codigo_postal>
+          <pais>España</pais>
+        </destino>
+        <kilometros>620</kilometros>
+        <tiempo_estimado>6.5 horas</tiempo_estimado>
+        <tiempo_real>6 horas 15 minutos</tiempo_real>
+      </recorrido>
+      <carga>
+        <tipo>Electrónica</tipo>
+        <peso>5500 kg</peso>
+        <volumen>25 m³</volumen>
+        <valor_mercancia>125000 €</valor_mercancia>
+      </carga>
+      <combustible>
+        <consumo>185 L</consumo>
+        <consumo_medio>29.8 L/100km</consumo_medio>
+        <coste>277.50 €</coste>
+      </combustible>
+    </ruta>
+    
+    <ruta id="R002" fecha="2024-01-12" estado="completada">
+      <camion_asignado matricula="5678-DEF" />
+      <conductor_asignado>María López Fernández</conductor_asignado>
+      <recorrido>
+        <origen>
+          <ciudad>Valencia</ciudad>
+          <provincia>Valencia</provincia>
+          <codigo_postal>46001</codigo_postal>
+          <pais>España</pais>
+        </origen>
+        <destino>
+          <ciudad>Sevilla</ciudad>
+          <provincia>Sevilla</provincia>
+          <codigo_postal>41001</codigo_postal>
+          <pais>España</pais>
+        </destino>
+        <kilometros>650</kilometros>
+        <tiempo_estimado>7 horas</tiempo_estimado>
+        <tiempo_real>6 horas 45 minutos</tiempo_real>
+      </recorrido>
+      <carga>
+        <tipo>Alimentación</tipo>
+        <peso>4800 kg</peso>
+        <volumen>30 m³</volumen>
+        <valor_mercancia>45000 €</valor_mercancia>
+      </carga>
+      <combustible>
+        <consumo>182 L</consumo>
+        <consumo_medio>28.0 L/100km</consumo_medio>
+        <coste>273.00 €</coste>
+      </combustible>
+    </ruta>
+    
+    <ruta id="R003" fecha="2024-01-14" estado="en_progreso">
+      <camion_asignado matricula="1234-ABC" />
+      <conductor_asignado>Juan Martínez García</conductor_asignado>
+      <recorrido>
+        <origen>
+          <ciudad>Barcelona</ciudad>
+          <provincia>Barcelona</provincia>
+          <codigo_postal>08001</codigo_postal>
+          <pais>España</pais>
+        </origen>
+        <destino>
+          <ciudad>Bilbao</ciudad>
+          <provincia>Vizcaya</provincia>
+          <codigo_postal>48001</codigo_postal>
+          <pais>España</pais>
+        </destino>
+        <kilometros>605</kilometros>
+        <tiempo_estimado>6.5 horas</tiempo_estimado>
+        <tiempo_real>En curso</tiempo_real>
+      </recorrido>
+      <carga>
+        <tipo>Textil</tipo>
+        <peso>3200 kg</peso>
+        <volumen>35 m³</volumen>
+        <valor_mercancia>28000 €</valor_mercancia>
+      </carga>
+      <combustible>
+        <consumo>En curso</consumo>
+        <consumo_medio>En curso</consumo_medio>
+        <coste>En curso</coste>
+      </combustible>
+    </ruta>
+  </rutas>
+  
+  <!-- Estadísticas de la flota -->
+  <estadisticas>
+    <total_camiones>3</total_camiones>
+    <camiones_activos>2</camiones_activos>
+    <camiones_mantenimiento>1</camiones_mantenimiento>
+    <total_rutas>3</total_rutas>
+    <rutas_completadas>2</rutas_completadas>
+    <kilometros_totales>1875</kilometros_totales>
+    <consumo_total_combustible>367 L</consumo_total_combustible>
+    <coste_total_combustible>550.50 €</coste_total_combustible>
+  </estadisticas>
+  
+</flota_vehiculos>
