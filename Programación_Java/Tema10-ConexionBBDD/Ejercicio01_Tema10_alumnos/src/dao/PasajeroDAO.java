@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import conexionBBDD.ConexionBBDD;
 import pasajeros.Pasajero;
+import vagones.VagonPasajeros;
 
 public class PasajeroDAO {
 	private ConexionBBDD conexion = new ConexionBBDD();
@@ -95,6 +96,33 @@ public class PasajeroDAO {
 
 	public void setConexion(ConexionBBDD conexion) {
 		this.conexion = conexion;
+	}
+
+	public ArrayList<Pasajero> readPasajeros(int id) {
+		ArrayList<Pasajero> pasajerosBBDD = new ArrayList<Pasajero>();
+		String query = "select p.* "
+					+ "from pasajeros p "
+					+ "join vagonPasajeros vp "
+					+ "on p.idVagon = vp.idVagon "
+					+ "where vp.idVagon = ?";
+		
+		try {
+			sentenciaParametrizada = connection.prepareStatement(query);
+			sentenciaParametrizada.setInt(1, id);
+			resultSet = sentenciaParametrizada.executeQuery();
+			while(resultSet.next()) {
+				pasajerosBBDD.add(new Pasajero(resultSet.getInt("idPasajero"),
+												resultSet.getString("nombre"),
+												resultSet.getString("infoBillete"),
+												resultSet.getBoolean("subidoEnVagon"),
+												resultSet.getInt("idVagon")));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return pasajerosBBDD;
 	}
 
 }

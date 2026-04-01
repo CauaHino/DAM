@@ -337,9 +337,22 @@ public class Main {
 					t.setLocomotora(locomotora);
 					ArrayList<Vagon> vagonesPasajerosBBDD = vagonDAO.readVagonesPasajeros(t.getIdentificador());
 					for(Vagon v : vagonesPasajerosBBDD) {
-						
+						pasajerosBBDD = pasajeroDAO.readPasajeros(v.getIdentificador());
+						((VagonPasajeros)v).setPasajeros(pasajerosBBDD);
 					}
-					
+					ArrayList<Vagon> vagonesMercanciaBBDD = vagonDAO.readVagonesMercancia(t.getIdentificador());
+					t.setLocomotora(locomotora);
+					ArrayList<Vagon> vagonesMixtosBBDD = vagonDAO.readVagonesMixtos(t.getIdentificador());
+					if("pasajeros".equalsIgnoreCase(t.getTipo())) {
+						t.setVagones(vagonesPasajerosBBDD);
+					} else if("mercancías".equalsIgnoreCase(t.getTipo())) {
+						t.setVagones(vagonesMercanciaBBDD);
+					} else {
+						// t.setVagones(vagonesPasajerosBBDD);
+						// t.getVagones().addAll(vagonesMercanciaBBDD);
+						t.setVagones(vagonesMixtosBBDD);
+					}
+					System.out.println(t);
 				}
 				
 				
