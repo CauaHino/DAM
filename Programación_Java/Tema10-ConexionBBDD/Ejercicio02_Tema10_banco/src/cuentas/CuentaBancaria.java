@@ -10,6 +10,7 @@ public abstract class CuentaBancaria implements Imprimible{
 	protected Persona titular;
 	protected double saldo;
 	protected String IBAN;
+	protected int idBanco;
 	
 	public CuentaBancaria() {
 		
@@ -58,5 +59,15 @@ public abstract class CuentaBancaria implements Imprimible{
 	}
 
 	public abstract String devolverInfoString();
+
+	public int getIdBanco() {
+		return idBanco;
+	}
+
+	public void setIdBanco(int idBanco) {
+		this.idBanco = idBanco;
+	}
+	
+	
 
 }

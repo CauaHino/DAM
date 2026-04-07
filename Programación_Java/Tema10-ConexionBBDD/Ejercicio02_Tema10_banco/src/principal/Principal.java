@@ -12,7 +12,7 @@ import cuentas.CuentaBancaria;
 import cuentas.CuentaCorrienteEmpresa;
 
 import cuentas.CuentaCorrientePersonal;
-
+import dao.*;
 import excepciones.IBANIncorrecto;
 import excepciones.TitularMenorDeEdad;
 import personas.Persona;
@@ -37,9 +37,23 @@ public class Principal {
 		
 		CuentaBancaria cuentaBancaria = null;
 		// Conexión a BBDD
-		ConexionBBDD conexion = new ConexionBBDD();		
+		BancoDAO bancoDAO;
+		CuentaAhorroDAO cuentaAhorroDAO;
+		CuentaBancariaDAO cuentaBancariaDAO;
+		CuentaCorrienteDAO cuentaCorrienteDAO;
+		CuentaCorrienteEmpresaDAO cuentaCorrienteEmpresaDAO;
+		CuentaCorrientePersonalDAO cuentaCorrientePersonalDAO;
+		PersonasDAO personasDAO;			
 		// Recupero el idBanco del último banco registrado en bbdd
-		
+		bancoDAO = new BancoDAO();
+		int ultimoID = bancoDAO.ultimoID();
+		if(ultimoID != 0) {
+			banco.setIdBanco(ultimoID + 1);
+		} else {
+			if(primeraVez) {
+				bancoDAO.create(banco);
+			}
+		}
 		
 		while (!salir) {
 			System.out.println("1. Abrir una nueva cuenta.");
@@ -70,7 +84,14 @@ public class Principal {
 				titular = new Persona(nombreTitular, apellidosTitular, DNITitular, edadTitular);
 				
 				// Insertar en BBDD
-				
+				personasDAO = new PersonasDAO();
+				ArrayList<Persona> personas = personasDAO.read();
+				if(personas.isEmpty()) {
+					personasDAO.insert(titular);
+				} else {
+					titular.setIdPersona(personas.get(personas.size() - 1).getIdPersona()+1);
+					personasDAO.insert(titular);
+				}
 				try {
 					System.out.println("Introduce el IBAN");
 					IBAN = entrada.nextLine();
@@ -97,11 +118,13 @@ public class Principal {
 						cuentaBancaria = new CuentaAhorro(tipoInteres, titular, saldo, IBAN);
 						
 						// Insertamos en BBDD la CuentaBancaria	comprobando el idCuenta
-						
-								
+						cuentaBancariaDAO = new CuentaBancariaDAO();
+						cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						cuentaBancariaDAO.getConexion().cerrarConexion();
 						// Insertamos en BBDD la CuentaAhorro	
-
-						
+						cuentaAhorroDAO = new CuentaAhorroDAO();
+						cuentaAhorroDAO.insertCuentaAhorro((CuentaAhorro)cuentaBancaria);
+						cuentaAhorroDAO.getConexion().cerrarConexion();
 						break;
 					case 2:
 						System.out.println("Introduce una lista de entidades autorizadas");
@@ -113,8 +136,13 @@ public class Principal {
 						cuentaBancaria = new CuentaCorrientePersonal(comisionMantenimiento, listaEntidades, titular, saldo, IBAN);
 						
 						// Insertamos en BBDD la CuentaBancaria	comprobando el idCuenta	
-						
+						cuentaBancariaDAO = new CuentaBancariaDAO();
+						cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						cuentaBancariaDAO.getConexion().cerrarConexion();
 						// Insertamos en BBDD la CuentaCorriente	
+						cuentaCorrienteDAO = new CuentaCorrienteDAO();
+						cuentaCorrienteDAO.insertCuentaBancaria(cuentaBancaria);
+						cuentaBancariaDAO.getConexion().cerrarConexion();
 						
 						// Insertamos en BBDD la CuentaCorrientePersonal
 
@@ -136,12 +164,17 @@ public class Principal {
 								comisionDescubierto, listaEntidades, titular, saldo, IBAN);
 						
 						// Insertamos en BBDD la CuentaBancaria	comprobando el idCuenta		
-
+						cuentaBancariaDAO = new CuentaBancariaDAO();
+						cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						cuentaBancariaDAO.getConexion().cerrarConexion();
 						
 						// Insertamos en BBDD la CuentaCorriente	
 
 						
 						// Insertamos en BBDD la CuentaCorrienteEmpresa
+						cuentaCorrienteEmpresaDAO = new CuentaCorrienteEmpresaDAO();
+						cuentaCorrienteEmpresaDAO.insertCuentaCorrienteEmpresa((CuentaCorrienteEmpresa)cuentaBancaria);
+						cuentaCorrienteEmpresaDAO.getConexion().cerrarConexion();
 
 						
 						break;
@@ -275,31 +308,40 @@ public class Principal {
 				break;
 			case 7:
 				
+				personasDAO = new PersonasDAO();
+				personasDAO.createTable();
+				System.out.println("Tabla Personas creada correctamente");				
+				personasDAO.getConexion().cerrarConexion();
 				
-				System.out.println("Tabla Personas creada correctamente");
-				
-				
+				bancoDAO = new BancoDAO();
+				bancoDAO.createTable();
 				System.out.println("Tabla Banco creada correctamente");
+				bancoDAO.getConexion().cerrarConexion();
 				
-					
+				cuentaBancariaDAO = new CuentaBancariaDAO();
+				cuentaBancariaDAO.createTable();
 				System.out.println("Tabla CuentaBancaria creada correctamente");
+				cuentaBancariaDAO.getConexion().cerrarConexion();
 				
-				
+				cuentaAhorroDAO = new CuentaAhorroDAO();
+				cuentaAhorroDAO.createTable();
 				System.out.println("Tabla CuentaAhorro creada correctamente");
+				cuentaAhorroDAO.getConexion().cerrarConexion();
 				
-				
+				cuentaCorrienteDAO = new CuentaCorrienteDAO();
+				cuentaCorrienteDAO.createTable();
 				System.out.println("Tabla CuentaCorriente creada correctamente");
+				cuentaCorrienteDAO.getConexion().cerrarConexion();
 				
-				
+				cuentaCorrientePersonalDAO = new CuentaCorrientePersonalDAO();
+				cuentaCorrientePersonalDAO.createTable();
 				System.out.println("Tabla CuentaCorrientePersonal creada correctamente");
+				cuentaCorrientePersonalDAO.getConexion().cerrarConexion();
 				
-				
+				cuentaCorrienteEmpresaDAO = new CuentaCorrienteEmpresaDAO();
+				cuentaCorrienteEmpresaDAO.createTable();
 				System.out.println("Tabla CuentaCorrienteEmpresa creada correctamente");
-				
-				
-				
-				
-				
+				cuentaCorrienteEmpresaDAO.getConexion().cerrarConexion();	
 				
 				break;
 			case 8:
