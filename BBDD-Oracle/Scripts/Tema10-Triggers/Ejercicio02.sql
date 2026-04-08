@@ -27,6 +27,7 @@ INSERT INTO Empleados (documento, apellido, nombre, seccion, sueldo) VALUES ('22
 INSERT INTO Empleados (documento, apellido, nombre, seccion, sueldo) VALUES ('23444555', 'GOMEZ', 'Gabriela', 'Sistemas', 1200);
 INSERT INTO Empleados (documento, apellido, nombre, seccion, sueldo) VALUES ('23666777', 'JUAREZ', 'Juan', 'Contaduria', 1000);
 
+commit;
 -- Punto 5
 select * from control;
 
