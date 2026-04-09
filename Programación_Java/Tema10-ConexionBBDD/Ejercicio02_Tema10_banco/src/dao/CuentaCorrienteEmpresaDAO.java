@@ -5,10 +5,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import bbdd.conexion.ConexionBBDD;
 import cuentas.CuentaBancaria;
 import cuentas.CuentaCorrienteEmpresa;
+import personas.Persona;
 
 public class CuentaCorrienteEmpresaDAO {
 	private ConexionBBDD conexion = new ConexionBBDD();
@@ -65,5 +67,35 @@ public class CuentaCorrienteEmpresaDAO {
 
 	public void setConexion(ConexionBBDD conexion) {
 		this.conexion = conexion;
+	}
+
+	public ArrayList<CuentaBancaria> read() {
+		ArrayList<CuentaBancaria> cuentas = new ArrayList<>();
+		Persona titular = null;
+		String querySelect = "SELECT cb.idCuenta, cb.iban, cb.saldo, cc.listaentidades, cce.maximoDescubierto, cce.interesDescubierto, "
+							+ "cce.comisionDescubierto, per.* "
+							+ "FROM CuentaBancaria as cb "
+							+ "INNER JOIN CuentaCorriente as cc "
+							+ "ON cb.idCuenta = cc.idCuenta "
+							+ "INNER JOIN CuentaCorrienteEmpresa as cce "
+							+ "ON cc.idCuenta = cce.idCuenta "
+							+ "INNER JOIN Personas as per "
+							+ "ON cb.idPersona = per.idPersona "
+							+ "ORDER BY cb.idCuenta;";
+		try {
+			sentencia = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			rs = sentencia.executeQuery(querySelect);
+			while (rs.next()) {
+				titular = new Persona(rs.getInt("idPersona"), rs.getString("nombre"), rs.getString("apellidos"), 
+						rs.getString("dni"), rs.getInt("edad"));
+				cuentas.add(new CuentaCorrienteEmpresa(rs.getInt("idCuenta"),rs.getDouble("saldo"), rs.getString("IBAN"),
+						titular,rs.getString("listaEntidades"), rs.getDouble("maximoDescubierto"), rs.getDouble("interesDescubierto"),
+						rs.getDouble("comisionDescubierto")));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return cuentas;
 	}
 }

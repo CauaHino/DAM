@@ -77,6 +77,23 @@ public class BancoDAO {
 			return false;
 		}
 	}
+
+	public boolean updateNumCuentas(Banco banco) {
+		String query = "update Banco "
+				+ "set numCuentas = ? "
+				+ "where idBanco = ?;";
+		try {
+			sentenciaParamentrizada = connection.prepareStatement(query);
+			sentenciaParamentrizada.setInt(1, banco.getNumeroCuentas());
+			sentenciaParamentrizada.setInt(2, banco.getIdBanco());
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		
+	}
 	
 
 }

@@ -70,4 +70,22 @@ public class CuentaBancariaDAO {
 	public void setConexion(ConexionBBDD conexion) {
 		this.conexion = conexion;
 	}
+
+	public int lastID() {
+		int idCuenta = 0;
+		String query = "select idCuenta from cuentabancaria "
+				+ "order by idCuenta desc "
+				+ "limit 1;";
+		
+		try {
+			sentencia = connection.createStatement();
+			rs = sentencia.executeQuery(query);
+			if(rs.next())
+				idCuenta = rs.getInt("idCuenta");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return idCuenta;
+	}
 }

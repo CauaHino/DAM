@@ -8,7 +8,7 @@ import bbdd.conexion.ConexionBBDD;
 import cuentas.CuentaAhorro;
 
 import cuentas.CuentaBancaria;
-
+import cuentas.CuentaCorriente;
 import cuentas.CuentaCorrienteEmpresa;
 
 import cuentas.CuentaCorrientePersonal;
@@ -49,6 +49,7 @@ public class Principal {
 		int ultimoID = bancoDAO.ultimoID();
 		if(ultimoID != 0) {
 			banco.setIdBanco(ultimoID + 1);
+			bancoDAO.create(banco);
 		} else {
 			if(primeraVez) {
 				bancoDAO.create(banco);
@@ -103,7 +104,10 @@ public class Principal {
 					saldo = entrada.nextDouble();
 					entrada.nextLine();
 					// Extraemos el último idCuenta para que cuando insertemos una nueva cuenta su idCuenta sea el último + 1
-
+					cuentaBancariaDAO = new CuentaBancariaDAO();
+					int lastIDCuenta = cuentaBancariaDAO.lastID();
+					cuentaBancariaDAO.getConexion().cerrarConexion();
+					
 					System.out.println("Elige el tipo de cuenta");
 					System.out.println("1. Cuenta de Ahorro");
 					System.out.println("2. Cuenta de Corriente Personal");
@@ -116,10 +120,16 @@ public class Principal {
 						tipoInteres = entrada.nextDouble();
 						entrada.nextLine();
 						cuentaBancaria = new CuentaAhorro(tipoInteres, titular, saldo, IBAN);
+						cuentaBancaria.setIdBanco(banco.getIdBanco());
 						
 						// Insertamos en BBDD la CuentaBancaria	comprobando el idCuenta
 						cuentaBancariaDAO = new CuentaBancariaDAO();
-						cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						if(lastIDCuenta == 0)
+							cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						else {
+							cuentaBancaria.setIdCuenta(lastIDCuenta+1);
+							cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						}
 						cuentaBancariaDAO.getConexion().cerrarConexion();
 						// Insertamos en BBDD la CuentaAhorro	
 						cuentaAhorroDAO = new CuentaAhorroDAO();
@@ -134,18 +144,27 @@ public class Principal {
 						comisionMantenimiento = entrada.nextDouble();
 						entrada.nextLine();
 						cuentaBancaria = new CuentaCorrientePersonal(comisionMantenimiento, listaEntidades, titular, saldo, IBAN);
+						cuentaBancaria.setIdBanco(banco.getIdBanco());
 						
 						// Insertamos en BBDD la CuentaBancaria	comprobando el idCuenta	
 						cuentaBancariaDAO = new CuentaBancariaDAO();
-						cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						if(lastIDCuenta == 0)
+							cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						else {
+							cuentaBancaria.setIdCuenta(lastIDCuenta+1);
+							cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						}
 						cuentaBancariaDAO.getConexion().cerrarConexion();
 						// Insertamos en BBDD la CuentaCorriente	
 						cuentaCorrienteDAO = new CuentaCorrienteDAO();
-						cuentaCorrienteDAO.insertCuentaBancaria(cuentaBancaria);
-						cuentaBancariaDAO.getConexion().cerrarConexion();
+						cuentaCorrienteDAO.insertCuentaCorriente((CuentaCorriente)cuentaBancaria);
+						cuentaCorrienteDAO.getConexion().cerrarConexion();
 						
 						// Insertamos en BBDD la CuentaCorrientePersonal
-
+						cuentaCorrientePersonalDAO = new CuentaCorrientePersonalDAO();
+						cuentaCorrientePersonalDAO.insertCuentaCorrientePersonal((CuentaCorrientePersonal)cuentaBancaria);
+						cuentaCorrientePersonalDAO.getConexion().cerrarConexion();
+						
 						
 						break;
 					case 3:
@@ -162,14 +181,22 @@ public class Principal {
 						entrada.nextLine();
 						cuentaBancaria = new CuentaCorrienteEmpresa(maxDescubierto, tipoInteresDescubierto,
 								comisionDescubierto, listaEntidades, titular, saldo, IBAN);
+						cuentaBancaria.setIdBanco(banco.getIdBanco());
 						
 						// Insertamos en BBDD la CuentaBancaria	comprobando el idCuenta		
 						cuentaBancariaDAO = new CuentaBancariaDAO();
-						cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						if(lastIDCuenta == 0)
+							cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						else {
+							cuentaBancaria.setIdCuenta(lastIDCuenta+1);
+							cuentaBancariaDAO.insertCuentaBancaria(cuentaBancaria);
+						}						
 						cuentaBancariaDAO.getConexion().cerrarConexion();
 						
 						// Insertamos en BBDD la CuentaCorriente	
-
+						cuentaCorrienteDAO = new CuentaCorrienteDAO();
+						cuentaCorrienteDAO.insertCuentaCorriente((CuentaCorriente)cuentaBancaria);
+						cuentaCorrienteDAO.getConexion().cerrarConexion();
 						
 						// Insertamos en BBDD la CuentaCorrienteEmpresa
 						cuentaCorrienteEmpresaDAO = new CuentaCorrienteEmpresaDAO();
@@ -189,7 +216,10 @@ public class Principal {
 					e.printStackTrace();
 				}
 				if (banco.abrirCuenta(cuentaBancaria)) {
-					// Registrar la cuenta en el banco
+					// Actualizar tabla Banco para incrementar el nº de cuentas
+					bancoDAO = new BancoDAO();
+					bancoDAO.updateNumCuentas(banco);
+					bancoDAO.getConexion().cerrarConexion();
 					
 					System.out.println("Se ha abierto la cuenta correctamente");
 				} else {
@@ -206,15 +236,30 @@ public class Principal {
 				switch (tipoCuenta) {
 				case 1:
 					// Consultar información de Cuenta de Ahorro
-					
+					cuentaAhorroDAO = new CuentaAhorroDAO();
+					ArrayList<CuentaBancaria> cuentas = cuentaAhorroDAO.listarCuentaAhorro();
+					cuentaAhorroDAO.getConexion().cerrarConexion();
+					for(int i = 0; i < cuentas.size(); i++) {
+						System.out.println(cuentas.get(i).devolverInfoString());
+					}
 					break;
 				case 2:
 					// Consultar información de Cuenta Corriente Personal
-					
+					cuentaCorrientePersonalDAO = new CuentaCorrientePersonalDAO();
+					ArrayList<CuentaBancaria> cuentasPersonal = cuentaCorrientePersonalDAO.read();
+					cuentaCorrientePersonalDAO.getConexion().cerrarConexion();
+					for(int i = 0; i < cuentasPersonal.size(); i++) {
+						System.out.println(cuentasPersonal.get(i).devolverInfoString());
+					}
 					break;
 				case 3:
 					// Consultar información de Cuenta Corriente Empresa
-					
+					cuentaCorrienteEmpresaDAO = new CuentaCorrienteEmpresaDAO();
+					ArrayList<CuentaBancaria> cuentasEmpresa = cuentaCorrienteEmpresaDAO.read();
+					cuentaCorrienteEmpresaDAO.getConexion().cerrarConexion();
+					for(int i = 0; i < cuentasEmpresa.size(); i++) {
+						System.out.println(cuentasEmpresa.get(i).devolverInfoString());
+					}
 					break;
 				default:
 					System.out.println("Debes elegir un tipo de cuenta");

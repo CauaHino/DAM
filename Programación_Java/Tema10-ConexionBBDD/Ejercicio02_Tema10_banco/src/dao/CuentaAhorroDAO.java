@@ -56,8 +56,8 @@ public class CuentaAhorroDAO {
 		}
 	}
 	
-	public ArrayList<CuentaAhorro> listarCuentaAhorro() {
-		ArrayList<CuentaAhorro> cuentasAhorros = new ArrayList<CuentaAhorro>();
+	public ArrayList<CuentaBancaria> listarCuentaAhorro() {
+		ArrayList<CuentaBancaria> cuentasAhorros = new ArrayList<CuentaBancaria>();
 		PersonasDAO personas = new PersonasDAO();
 		String query = "select cb.*, ca.tipointeres "
 				+ "from CuentaAhorro ca "
