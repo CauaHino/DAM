@@ -1,4 +1,3 @@
-docker-compose.yml
 BBDD-Oracle/oradata/
 *.dbf
 *.LOG
@@ -10,5 +9,4 @@ venv/
 env/
 __pycache__/
 *.pyc
-Dockerfile*
 mariadb-data/

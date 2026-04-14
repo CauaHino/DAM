@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  oracle-db:
+    image: container-registry.oracle.com/database/free:latest
+    container_name: oracle-db
+    ports:
+      - "1521:1521"   # Para SQL Developer / VS Code
+      - "5500:5500"   # Para la consola Web (EM)
+    environment:
+      - ORACLE_PWD=1234
+    volumes:
+      - ./oradata:/opt/oracle/oradata
+    shm_size: '2gb'   # Crucial para evitar errores de memoria compartida
+    restart: always

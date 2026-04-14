@@ -1,0 +1,30 @@
+services:
+  postgres-dam:
+    image: postgres:latest
+    container_name: postgresJava
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata_dam:/var/lib/postgresql
+
+  pgadmin-dam:
+    image: dpage/pgadmin4
+    container_name: pgadmin-dam
+    user: root
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@email.com
+      PGADMIN_DEFAULT_PASSWORD: 1234
+    volumes:
+      - pgadmin_config:/var/lib/pgadmin
+    depends_on:
+      - postgres-dam
+
+volumes:
+  pgdata_dam:
+  pgadmin_config:
