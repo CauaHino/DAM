@@ -88,4 +88,33 @@ public class CuentaBancariaDAO {
 		}
 		return idCuenta;
 	}
+	
+	public boolean retirarCuenta(String iban, int cantidad) {
+		double saldo = 0;
+		String query = "select * "
+				+ "from cuentasBancaria "
+				+ "where iban = ? "
+				+ "order by idCuenta;";
+		
+		try {
+			sentenciaParametrizada = connection.prepareStatement(query);
+			sentenciaParametrizada.setString(1, iban);
+			rs = sentenciaParametrizada.executeQuery();
+			if(rs.next()) {
+				saldo = rs.getDouble("saldo");
+				saldo += cantidad;
+				String queryUpdate = "UPDATE CuentaBancaria SET saldo = ? WHERE IBAN = ?";
+				sentenciaParametrizada = connection.prepareStatement(queryUpdate);
+				sentenciaParametrizada.setDouble(1, saldo);
+				sentenciaParametrizada.setString(2, iban);
+				sentenciaParametrizada.executeUpdate();
+				return true;
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
 }
