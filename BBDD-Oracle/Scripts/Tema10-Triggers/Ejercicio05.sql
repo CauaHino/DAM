@@ -45,7 +45,7 @@ insert into libros values(7, 'Don Quijote de la Mancha', 'Miguel de Cervantes', 
 commit;
 /
 
--- Parte 05
+-- Parte 05 
 select * from ofertas;
 
 -- Parte 06

@@ -43,13 +43,13 @@ create or replace trigger tr_codigo_articulo
     before insert
     on articulos
     for each row 
-declare 
-    codA articulos.CODIGO%TYPE;
 begin 
-    select max(codigo) into codA
+    select max(codigo)+1
     from articulos;
 
-    :new.codigo := codA + 1;
+    if :new.codigo is null THEN
+        :new.codigo := 1;
+    end if;
 
     insert into control values (user, sysdate, :new.codigo);
 end;
