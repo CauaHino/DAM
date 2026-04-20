@@ -16,7 +16,7 @@ services:
     user: root
     restart: always
     ports:
-      - "8080:80"
+      - "8081:80"
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@email.com
       PGADMIN_DEFAULT_PASSWORD: 1234

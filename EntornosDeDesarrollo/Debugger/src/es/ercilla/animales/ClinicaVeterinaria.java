@@ -49,12 +49,12 @@ public class ClinicaVeterinaria {
 		ClinicaVeterinaria clinicaVeterinaria = new ClinicaVeterinaria();
 		clinicaVeterinaria.altaInicial();
 		clinicaVeterinaria.insertaAnimal(new Animal("Cocodrilo", "Reptil", 1500));
-		System.out.println("Actualmente tenemos los siguientes animales: " + clinicaVeterinaria.getAnimales());
+		System.out.println("Actualmente tenemos los siguientes animales: " + "\n" +clinicaVeterinaria.getAnimales());
 		clinicaVeterinaria.insertaAnimal(new Animal("Serpiente", "Ofidio", 3));
-		System.out.println("Actualmente tenemos los siguientes animales: " + clinicaVeterinaria.getAnimales());
+		System.out.println("Actualmente tenemos los siguientes animales: " + "\n" + clinicaVeterinaria.getAnimales());
 		clinicaVeterinaria.insertaAnimal(new Animal("Serpiente", "Ofidios", 3));
-		System.out.println("Actualmente tenemos los siguientes animales: " + clinicaVeterinaria.getAnimales());
+		System.out.println("Actualmente tenemos los siguientes animales: " + "\n" + clinicaVeterinaria.getAnimales());
 		clinicaVeterinaria.insertaAnimal(new Animal("Perro", "Mamífero", 3));
-		System.out.println("Actualmente tenemos los siguientes animales: " + clinicaVeterinaria.getAnimales());
+		System.out.println("Actualmente tenemos los siguientes animales: " + "\n" + clinicaVeterinaria.getAnimales());
 	}
 }
