@@ -1,6 +1,7 @@
 package controlador;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
@@ -36,17 +37,42 @@ public class ProductoControlador extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		String opcion = request.getParameter("opcion");
+		ProductoDAO productoDAO = new ProductoDAO();
 		if(opcion.equalsIgnoreCase("crearTabla")) {
-			ProductoDAO productoDAO = new ProductoDAO();
 			if(productoDAO.createTable()) {
 				System.out.println("Tabla PRODUCTO creada correctamente");
 				request.setAttribute("mensaje", "producto INSERTADO correctamente");
 			}
-			productoDAO.getConexion().cerrarConexion();
 			// Despues vuelve al indice gracias a esto
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/index.jsp");
-            requestDispatcher.forward(request, response);
+	        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/index.jsp");
+	        requestDispatcher.forward(request, response);
+		} else if(opcion.equalsIgnoreCase("consultar")) {
+			ArrayList<Producto> productos = productoDAO.consultarProducto();
+			for(Producto p : productos) {
+				System.out.println(p);
+				request.setAttribute("productos", productos);
+			}
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/consultar2.jsp");
+	        requestDispatcher.forward(request, response);
+		} else if(opcion.equalsIgnoreCase("editar")) {
+			int idProducto = Integer.parseInt(request.getParameter("idProducto"));
+			Producto p = productoDAO.consultarProducto(idProducto);
+			System.out.println(p);
+			if(p != null) {
+				request.setAttribute("producto", p);
+			}
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/editar.jsp");
+	        requestDispatcher.forward(request, response);
+		} else if(opcion.equalsIgnoreCase("eliminar")) {
+			int idProducto = Integer.parseInt(request.getParameter("idProducto"));
+			productoDAO.eliminarProducto(idProducto);
+			System.out.println("Producto con ID "+ idProducto +" correctamente");
+			request.setAttribute("mensaje", "Producto con ID "+ idProducto +" correctamente");
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/index.jsp");
+	        requestDispatcher.forward(request, response);
 		}
+		productoDAO.getConexion().cerrarConexion();
+		
 	}
 
 	/**
@@ -74,6 +100,27 @@ public class ProductoControlador extends HttpServlet {
 				System.out.println("ERROR al insertar producto");
 				request.setAttribute("mensaje", "ERROR al insertar producto");
 			}
+			productoDAO.getConexion().cerrarConexion();
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/index.jsp");
+            requestDispatcher.forward(request, response);
+		} else if(opcion.equalsIgnoreCase("editar")) {
+			ProductoDAO productoDAO = new ProductoDAO();
+			Producto producto = new Producto();
+			
+			producto.setIdProducto(Integer.valueOf(request.getParameter("idProducto")));
+			producto.setNombre(request.getParameter("nombre"));
+			producto.setCantidad(Integer.valueOf(request.getParameter("cantidad")));
+			producto.setPrecio(Double.valueOf(request.getParameter("precio")));
+			producto.setFechaActualizacion(new java.sql.Date(fechaActual.getTime()));
+			
+			if(productoDAO.editarProducto(producto)) {
+				System.out.println("Producto con ID "+ producto.getIdProducto() +" Actualizado con éxito");
+				request.setAttribute("mensaje", "Producto con ID "+ producto.getIdProducto() +" Actualizado con éxito");
+			} else {
+				System.out.println("ERROR al actualizar el producto " + producto.getIdProducto());
+				request.setAttribute("mensaje", "ERROR al actualizar el producto " + producto.getIdProducto());
+			}
+			
 			productoDAO.getConexion().cerrarConexion();
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/index.jsp");
             requestDispatcher.forward(request, response);

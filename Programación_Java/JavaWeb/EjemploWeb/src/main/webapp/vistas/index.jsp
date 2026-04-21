@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Styles.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -19,12 +20,13 @@
 			alert(mensaje);
 		}
 		
-		mostrarMensaje(<%= mensaje %>)
+		mostrarMensaje('<%= mensaje %>')
 		
 		<% } %>
 	</script>
 	<!-- ${pageContext.request.contextPath} == /EjemploWeb -->
 	<a href="${pageContext.request.contextPath}/ProductoControlador?opcion=crearTabla">Crear Tabla Producto</a><br/>
-	<a href="${pageContext.request.contextPath}/vistas/insertar.jsp">INSERTAR PRODUCTO</a>
+	<a href="${pageContext.request.contextPath}/vistas/insertar.jsp">INSERTAR PRODUCTO</a><br/>
+	<a href="${pageContext.request.contextPath}/ProductoControlador?opcion=consultar">CONSULTAR TABLA</a><br/>
 </body>
 </html>
