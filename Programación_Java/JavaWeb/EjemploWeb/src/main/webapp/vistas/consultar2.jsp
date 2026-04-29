@@ -35,6 +35,7 @@
 				<td>
 					<a href="${pageContext.request.contextPath}/ProductoControlador?opcion=editar&idProducto=<c:out value="${producto.idProducto}"></c:out>">EDITAR</a>
 					<a href="${pageContext.request.contextPath}/ProductoControlador?opcion=eliminar&idProducto=<c:out value="${producto.idProducto}"></c:out>">ELIMINAR</a>
+					<a href="${pageContext.request.contextPath}/CarritoControlador?opcion=agregar&idProducto=<c:out value="${producto.idProducto}"></c:out>">AGREGAR</a>
 				</td>
 			</tr>
 		</tbody>

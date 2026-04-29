@@ -15,7 +15,7 @@ public class ProductoDAO {
 	private Connection conn;
 
 	public ProductoDAO() {
-		this.conn = this.conexion.conectar();
+		this.conn = this.conexion.conectarDotenv();
 	}
 
 	public boolean createTable() {

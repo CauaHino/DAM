@@ -1,0 +1,36 @@
+Libro
+Harry Potter
+J.K. Rowling
+111-84-111-1111-1
+Pelicula
+El Señor de los Anillos
+Peter Jackson
+2001-12-19
+Libro
+Don Quijote de La Mancha
+Miguel de Cervantes
+222-84-222-2222-2
+VideoJuego
+FC26
+Deportes
+true
+Pelicula
+El Caballero Oscuro
+Christopher Nolan
+2008-08-13
+VideoJuego
+Call Of Duty
+Disparos
+false
+Libro
+El Principito
+Antoine de Saint-Exupéry
+333-84-333-3333-3
+Pelicula
+Titanic
+James Cameron
+1998-01-08
+VideoJuego
+League of Legends
+Fantasía
+true

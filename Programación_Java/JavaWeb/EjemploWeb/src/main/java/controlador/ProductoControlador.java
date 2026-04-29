@@ -38,6 +38,14 @@ public class ProductoControlador extends HttpServlet {
 		
 		String opcion = request.getParameter("opcion");
 		ProductoDAO productoDAO = new ProductoDAO();
+		if(opcion == null) {
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/index.jsp");
+	        requestDispatcher.forward(request, response);
+		}
+		if(opcion.equalsIgnoreCase("inicio")) {
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/index.jsp");
+	        requestDispatcher.forward(request, response);
+		}
 		if(opcion.equalsIgnoreCase("crearTabla")) {
 			if(productoDAO.createTable()) {
 				System.out.println("Tabla PRODUCTO creada correctamente");
@@ -50,8 +58,8 @@ public class ProductoControlador extends HttpServlet {
 			ArrayList<Producto> productos = productoDAO.consultarProducto();
 			for(Producto p : productos) {
 				System.out.println(p);
-				request.setAttribute("productos", productos);
 			}
+			request.setAttribute("productos", productos);
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/consultar2.jsp");
 	        requestDispatcher.forward(request, response);
 		} else if(opcion.equalsIgnoreCase("editar")) {

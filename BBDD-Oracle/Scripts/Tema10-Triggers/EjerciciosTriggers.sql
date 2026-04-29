@@ -167,7 +167,7 @@ AFTER INSERT OR UPDATE ON suministros
 FOR EACH ROW
 DECLARE
     CURSOR c_puc IS 
-        SELECT precio_unidad_compra 
+        SELECT puc 
         FROM suministros 
         WHERE codigo_articulo = :NEW.codigo_articulo;
     
