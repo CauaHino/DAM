@@ -1,6 +1,10 @@
 package controlador;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -11,7 +15,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import dao.ProductoDAO;
+import modelo.Departamento;
 import modelo.Producto;
 
 /**
@@ -78,6 +89,34 @@ public class ProductoControlador extends HttpServlet {
 			request.setAttribute("mensaje", "Producto con ID "+ idProducto +" correctamente");
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/vistas/index.jsp");
 	        requestDispatcher.forward(request, response);
+		} else if(opcion.equalsIgnoreCase("peticionWeb")) {
+			HttpClient cliente = HttpClient.newHttpClient();
+			HttpRequest peticion = HttpRequest.newBuilder().uri(URI.create("http://info.empresa.dam.es:8055/items/departamentos")).GET().build();
+			try {
+				HttpResponse<String> respuesta = cliente.send(peticion, HttpResponse.BodyHandlers.ofString());
+				String respuestaString = respuesta.body();
+				System.out.println(respuestaString);
+				ArrayList<Departamento> departamentos = new ArrayList<Departamento>();
+				Gson gson = new Gson().newBuilder().setPrettyPrinting().create();
+				JsonObject jsonParser = JsonParser.parseString(respuestaString).getAsJsonObject();
+				JsonArray jsonArray = jsonParser.getAsJsonArray("data");
+				int id;
+				String nombre, descripcion;
+				for(JsonElement json : jsonArray) {
+					JsonObject jsonObject = json.getAsJsonObject();
+					id = jsonObject.get("id").getAsInt();
+					nombre = jsonObject.get("nombre").getAsString();
+					descripcion = jsonObject.get("descripcion").getAsString();
+					departamentos.add(new Departamento(id, nombre, descripcion));
+				}
+				System.out.println(departamentos);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		productoDAO.getConexion().cerrarConexion();
 		

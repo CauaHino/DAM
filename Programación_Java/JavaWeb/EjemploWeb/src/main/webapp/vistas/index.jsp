@@ -29,5 +29,6 @@
 	<a href="${pageContext.request.contextPath}/vistas/insertar.jsp">INSERTAR PRODUCTO</a><br/>
 	<a href="${pageContext.request.contextPath}/ProductoControlador?opcion=consultar">CONSULTAR TABLA</a><br/>
 	<a href="${pageContext.request.contextPath}/vistas/carrito.jsp">CARRITO</a><br/>
+	<a href="${pageContext.request.contextPath}/ProductoControlador?opcion=peticionWeb">Petición Web</a><br/>
 </body>
 </html>
